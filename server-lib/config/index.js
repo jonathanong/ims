@@ -1,6 +1,8 @@
 
 const assert = require('assert')
 
+exports.s3Prefix = process.env.IMS_PREFIX || ''
+
 exports.s3 = {
   accessKeyId: process.env.IMS_ACCESS_KEY_ID || process.env.ACCESS_KEY_ID,
   secretAccessKey: process.env.IMS_SECRET_ACCESS_KEY || process.env.SECRET_ACCESS_KEY,
@@ -13,7 +15,7 @@ exports.s3 = {
 
 exports.imgix = {
   subdomain: process.env.IMS_IMGIX_SUBDOMAIN || process.env.IMGIX_SUBDOMAIN,
-  apiKey: process.env.IMS_IMGIX_API_KEY || process.env.IMGIX_API_KEY,
+  apiKey: process.env.IMS_IMGIX_API_KEY || process.env.IMGIX_API_KEY
 }
 
 assert(exports.s3.accessKeyId)
@@ -21,3 +23,11 @@ assert(exports.s3.secretAccessKey)
 assert(exports.s3.params.Bucket)
 
 assert(exports.imgix.subdomain)
+
+exports.formats = [
+  'jpeg',
+  'png',
+  'svg',
+  'gif',
+  'webp'
+]

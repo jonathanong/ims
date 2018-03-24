@@ -9,12 +9,16 @@ END$$;
 CREATE TABLE IF NOT EXISTS images (
   id SERIAL PRIMARY KEY,
 
-  created_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  created_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
+  s3_key VARCHAR(255) UNIQUE NOT NULL,
   pathname VARCHAR(255) UNIQUE NOT NULL,
   title VARCHAR(255) NOT NULL DEFAULT '',
   description VARCHAR(10000) NOT NULL DEFAULT '',
+
+  deleted BOOLEAN DEFAULT FALSE,
+  deleted_ts TIMESTAMP,
 
   -- metadata
   format image_formats NOT NULL,
@@ -22,18 +26,13 @@ CREATE TABLE IF NOT EXISTS images (
   height INTEGER NOT NULL,
   space VARCHAR(10) NOT NULL, -- how long can this be?
   channels SMALLINT NOT NULL,
-  density SMALLINT DEFAULT -1,
+  density SMALLINT,
   has_profile BOOLEAN NOT NULL,
   has_alpha BOOLEAN NOT NULL,
-  orientation SMALLINT NOT NULL,
-  exif BYTEA,
-  icc BYTEA,
-  iptc BYTEA,
-  xmp BYTEA,
+  orientation SMALLINT,
+  is_opaque BOOLEAN NOT NULL,
 
-  -- stats
-  channel_stats JSONB NOT NULL,
-  is_opaque BOOLEAN NOT NULL
+  CHECK (pathname = LOWER(TRIM(pathname)))
 );
 
 CREATE TABLE IF NOT EXISTS tags (
@@ -48,4 +47,12 @@ CREATE TABLE IF NOT EXISTS images_to_tags (
   tag_id INTEGER NOT NULL REFERENCES tags,
 
   UNIQUE (image_id, tag_id)
+);
+
+CREATE TABLE IF NOT EXISTS image_pathname_history (
+  image_id INTEGER NOT NULL REFERENCES images,
+  pathname VARCHAR(255) NOT NULL,
+  created_ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+  CHECK (pathname = LOWER(TRIM(pathname)))
 );

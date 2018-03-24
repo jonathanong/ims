@@ -2,3 +2,5 @@
 extends:
   - standard
   - standard-react
+rules:
+  camelcase: 0

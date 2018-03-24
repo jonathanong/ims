@@ -5,12 +5,16 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const migrate = require('./migrate')
+const path = require('path')
+const fs = require('fs')
+
 const db = require('./')
 
 async function run () {
   await db.query(`DROP SCHEMA IF EXISTS PUBLIC CASCADE;`)
   await db.query(`CREATE SCHEMA IF NOT EXISTS PUBLIC;`)
   await migrate()
+  await db.query(fs.readFileSync(path.resolve(__dirname, 'views.sql'), 'utf8'))
 }
 
 run().then(() => {

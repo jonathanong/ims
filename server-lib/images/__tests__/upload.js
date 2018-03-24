@@ -3,6 +3,9 @@ const request = require('request')
 const assert = require('assert')
 
 const {
+  randomString
+} = require('../../utils')
+const {
   download,
   getMetadata,
   upload
@@ -30,6 +33,6 @@ test('getMetadata(filename)', async () => {
 })
 
 test('upload(filename, key, metadata)', async () => {
-  const data = await upload(filename, 'test/' + Math.random().toString(36).slice(2) + '.png', metadata)
+  const data = await upload(filename, 'test/' + randomString() + '.png', metadata)
   assert(data)
 })

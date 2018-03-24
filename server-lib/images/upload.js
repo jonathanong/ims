@@ -7,7 +7,8 @@ const sharp = require('sharp')
 const cp = require('fs-cp')
 const fs = require('fs')
 
-const s3 = new S3(require('../config').s3)
+const config = require('../config')
+const s3 = new S3(config.s3)
 
 // download a stream to the local file system
 exports.download = stream => cp(stream, tempPath())
