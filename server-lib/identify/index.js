@@ -1,19 +1,8 @@
 
-const S3 = require('aws-sdk/clients/s3')
-const tempPath = require('temp-path')
 const error = require('http-errors')
-const mime = require('mime-types')
 const sharp = require('sharp')
-const cp = require('fs-cp')
-const fs = require('fs')
 
-const config = require('../config')
-const s3 = new S3(config.s3)
-
-// download a stream to the local file system
-exports.download = stream => cp(stream, tempPath())
-
-exports.getMetadata = async filename => {
+module.exports = async filename => {
   const metadata = await sharp(filename).metadata().catch((err) => {
     throw error(415, `Could not read the image file metadata: ${err.message}`)
   })
@@ -34,9 +23,3 @@ exports.getMetadata = async filename => {
     is_opaque: stats.isOpaque
   }
 }
-
-exports.upload = (filename, Key, metadata) => s3.putObject({
-  Key,
-  Body: fs.createReadStream(filename),
-  ContentType: mime.contentType(metadata.format)
-}).promise()

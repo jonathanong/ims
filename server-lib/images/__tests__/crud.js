@@ -2,11 +2,9 @@
 const request = require('request')
 const assert = require('assert')
 
+const identify = require('../../identify')
 const {
   download,
-  getMetadata
-} = require('../upload')
-const {
   randomString
 } = require('../../utils')
 const {
@@ -30,8 +28,8 @@ test('download()', async () => {
   assert(filename)
 })
 
-test('getMetadata(filename)', async () => {
-  metadata = await getMetadata(filename)
+test('identify(filename)', async () => {
+  metadata = await identify(filename)
   assert.equal('string', typeof metadata.format)
   assert.equal('number', typeof metadata.width)
   assert.equal('number', typeof metadata.height)

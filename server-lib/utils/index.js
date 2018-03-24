@@ -1,4 +1,10 @@
 
+const tempPath = require('temp-path')
+const cp = require('fs-cp')
+
+// download a stream to the local file system
+exports.download = stream => cp(stream, tempPath())
+
 exports.randomString = () => Math.random().toString(36).slice(2)
 
 exports.getLimitAndOffset = (options = {}) => {
