@@ -1,0 +1,72 @@
+
+defaults: &defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:8
+      environment:
+        NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
+        JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+
+server-defaults: &server-defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:8
+      environment:
+        NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
+        JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+        DATABASE_URL: postgres://root:@localhost/ims
+        DATABASE_NAME: ims
+    - image: mdillon/postgis:10-alpine
+      environment:
+        POSTGRES_USER: root
+        POSTGRES_DB: ims
+        POSTGRES_PASSWORD: ""
+
+restore_cache: &restore_cache
+  keys:
+    - code-{{ .Branch }}-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
+    - code-master-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
+
+save_cache: &save_cache
+  key: code-{{ .Branch }}-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
+  paths:
+    - .cache
+    - node_modules
+
+version: 2
+jobs:
+  test:
+    <<: *server-defaults
+    steps:
+      - checkout
+      - restore_cache: *restore_cache
+      - run: npm install
+      - run: npm run eslint
+      - run: npm run reset-db
+      - run: npm run test:server -- --maxWorkers 4
+      - run: npx codecov
+      - run: rm -rf coverage
+      - run: npm run test:jsdom -- --maxWorkers 2
+      - run: npx codecov
+      - run: rm -rf coverage
+      - run: npm run build-storybook
+      - save_cache: *save_cache
+  storybook:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache: *restore_cache
+      - run: npx storybook-to-ghpages
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - test
+      - storybook:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master
