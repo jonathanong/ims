@@ -10,7 +10,8 @@
     "server",
     "server-api",
     "server-controllers",
-    "server-lib"
+    "server-lib",
+    "server-model"
   ],
   "cacheDirectory": ".cache/jest",
   "collectCoverage": true
