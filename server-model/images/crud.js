@@ -4,10 +4,10 @@ const sanitize = require('../../server-lib/utils/sanitize')
 const { formats } = require('../../server-lib/config')
 const db = require('../../psql')
 
-exports.createImage = async (s3_key, metadata) => {
+exports.createImage = async (key, metadata) => {
   const { rows } = await db.query(`
     INSERT INTO images (
-      s3_key,
+      key,
       pathname,
       title,
       format,
@@ -36,7 +36,7 @@ exports.createImage = async (s3_key, metadata) => {
       $11
     ) RETURNING id
   `, [
-    s3_key,
+    key,
     metadata.format,
     metadata.width,
     metadata.height,
@@ -59,7 +59,7 @@ exports.createImage = async (s3_key, metadata) => {
       $1,
       $2
     )
-  `, [id, s3_key])
+  `, [id, key])
 
   return exports.getImageById(id)
 }
