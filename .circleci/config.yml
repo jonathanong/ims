@@ -23,39 +23,41 @@ server-defaults: &server-defaults
         POSTGRES_PASSWORD: ""
 
 restore_cache: &restore_cache
-  keys:
-    - code-{{ .Branch }}-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
-    - code-master-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
+  restore_cache:
+    keys:
+      - code-{{ .Branch }}-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
+      - code-master-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
 
 save_cache: &save_cache
-  key: code-{{ .Branch }}-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
-  paths:
-    - .cache
-    - node_modules
+  save_cache:
+    key: code-{{ .Branch }}-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
+    paths:
+      - .cache
+      - node_modules
 
+test-coverage: &test-coverage
+  run: npx codecov && rm -rf codecov
 version: 2
 jobs:
   test:
     <<: *server-defaults
     steps:
       - checkout
-      - restore_cache: *restore_cache
+      - *restore_cache
       - run: npm install
       - run: npm run eslint
       - run: npm run reset-db
       - run: npm run test:server -- --maxWorkers 4
-      - run: npx codecov
-      - run: rm -rf coverage
+      - *test-coverage
       - run: npm run test:jsdom -- --maxWorkers 2
-      - run: npx codecov
-      - run: rm -rf coverage
+      - *test-coverage
       - run: npm run build-storybook
-      - save_cache: *save_cache
+      - *save_cache
   storybook:
     <<: *defaults
     steps:
       - checkout
-      - restore_cache: *restore_cache
+      - *restore_cache
       - run: npx storybook-to-ghpages
 
 workflows:
