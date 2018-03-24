@@ -116,18 +116,20 @@ exports.getImages = async (options = {}) => {
       .map((x) => {
         const length = values.push(x)
         const nameFilter = `EXISTS (
-        SELECT 1
-        FROM images_to_tags
-        JOIN tags ON images_to_tags.tag_id = tags.id
-        WHERE images_to_tags.image_id = images.id
-          AND tags.name = $${length}
-        LIMIT 1
-      )`
+          SELECT 1
+          FROM images_to_tags
+          JOIN tags ON images_to_tags.tag_id = tags.id
+          WHERE images_to_tags.image_id = images.id
+            AND tags.name = $${length}
+          LIMIT 1
+        )`
+
         const idFilter = `EXISTS (
-        SELECT 1
-        FROM images_to_tags
-        WHERE tag_id = $${length}
-      )`
+          SELECT 1
+          FROM images_to_tags
+          WHERE tag_id = $${length}
+        )`
+
         if (isNaN(x)) return nameFilter
 
         return `(${nameFilter} OR ${idFilter})`
@@ -141,18 +143,20 @@ exports.getImages = async (options = {}) => {
       .map((x) => {
         const length = values.push(x)
         const nameFilter = `NOT EXISTS (
-        SELECT 1
-        FROM images_to_tags
-        JOIN tags ON images_to_tags.tag_id = tags.id
-        WHERE images_to_tags.image_id = images.id
-          AND tags.name = $${length}
-        LIMIT 1
-      )`
+          SELECT 1
+          FROM images_to_tags
+          JOIN tags ON images_to_tags.tag_id = tags.id
+          WHERE images_to_tags.image_id = images.id
+            AND tags.name = $${length}
+          LIMIT 1
+        )`
+
         const idFilter = `NOT EXISTS (
-        SELECT 1
-        FROM images_to_tags
-        WHERE tag_id = $${length}
-      )`
+          SELECT 1
+          FROM images_to_tags
+          WHERE tag_id = $${length}
+        )`
+
         if (isNaN(x)) return nameFilter
 
         return `(${nameFilter} OR ${idFilter})`
