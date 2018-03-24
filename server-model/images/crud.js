@@ -1,4 +1,6 @@
 
+const assert = require('assert')
+
 const { getLimitAndOffset } = require('../../server-lib/utils')
 const sanitize = require('../../server-lib/utils/sanitize')
 const { formats } = require('../../server-lib/config')
@@ -125,15 +127,18 @@ exports.getImages = async (options = {}) => {
   const values = [limit, offset]
 
   if (options.formats) {
-    filters.push(`images.format IN (${options.formats.split(',').filter(x => formats.includes(x)).map(x => `'${x}'`).join(',')})`)
+    const x = options.formats.toLowerCase().split(',').map(x => x.trim())
+    assert(x.length, 'Null list of image formats.')
+    x.forEach(y => assert(formats.includes(y), `Invalid image format: ${y}`))
+    filters.push(`images.format IN (${x.map(y => `'${y}'`).join(',')})`)
   }
 
   if (options.tags) {
-    filters.push(`(${filterTags(options.tags, values, false).join('\nAND\n')})`)
+    filters.push(...filterTags(options.tags, values, false))
   }
 
   if (options.ex_tags) {
-    filters.push(`(${filterTags(options.ex_tags, values, false).join('\nAND\n')})`)
+    filters.push(...filterTags(options.ex_tags, values, true))
   }
 
   const result = await db.query(`
