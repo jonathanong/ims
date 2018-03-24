@@ -1,0 +1,17 @@
+{
+  "testEnvironment": "node",
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "/__tests__/",
+    "/tests/",
+    "/test/"
+  ],
+  "roots": [
+    "server",
+    "server-api",
+    "server-controllers",
+    "server-lib"
+  ],
+  "cacheDirectory": ".cache/jest",
+  "collectCoverage": true
+}

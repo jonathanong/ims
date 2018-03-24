@@ -7,8 +7,16 @@ BEGIN
 END$$;
 
 CREATE TABLE IF NOT EXISTS images (
-  id VARCHAR(64) PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
+
   created_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+  pathname VARCHAR(255) UNIQUE NOT NULL,
+  title VARCHAR(255) NOT NULL DEFAULT '',
+  description VARCHAR(10000) NOT NULL DEFAULT '',
+
+  -- metadata
   format image_formats NOT NULL,
   width INTEGER NOT NULL,
   height INTEGER NOT NULL,
@@ -22,29 +30,22 @@ CREATE TABLE IF NOT EXISTS images (
   icc BYTEA,
   iptc BYTEA,
   xmp BYTEA,
-  channels JSONB NOT NULL,
+
+  -- stats
+  channel_stats JSONB NOT NULL,
   is_opaque BOOLEAN NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS tags (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(100) UNIQUE NOT NULL
+  name VARCHAR(100) UNIQUE NOT NULL,
+
+  CHECK (name = LOWER(TRIM(name)))
 );
 
-CREATE TABLE IF NOT EXISTS image_assets (
-  id SERIAL PRIMARY KEY,
-  image_id VARCHAR(64) NOT NULL REFERENCES images,
-
-  created_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  updated_timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-  title VARCHAR(255) NOT NULL DEFAULT '',
-  description VARCHAR(10000) NOT NULL DEFAULT ''
-);
-
-CREATE TABLE IF NOT EXISTS image_assets_to_tags (
-  image_asset_id INTEGER NOT NULL REFERENCES image_assets,
+CREATE TABLE IF NOT EXISTS images_to_tags (
+  image_id INTEGER NOT NULL REFERENCES images,
   tag_id INTEGER NOT NULL REFERENCES tags,
 
-  UNIQUE (image_asset_id, tag_id)
+  UNIQUE (image_id, tag_id)
 );
