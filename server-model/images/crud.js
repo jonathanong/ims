@@ -69,38 +69,55 @@ exports.getImageById = async (id) => {
     SELECT *
     FROM view_images
     WHERE id = $1
-      AND deleted = FALSE
   `, [id])
 
   return rows[0] || null
 }
 
+const getImageByPathQuery = (notDeleted) => `
+  SELECT image_id
+  FROM image_pathname_history
+  JOIN images ON image_pathname_history.image_id = images.id
+  WHERE image_pathname_history.pathname = $1 ${notDeleted ? 'AND images.deleted = FALSE' : ''}
+  ORDER BY image_pathname_history.created_ts DESC
+  LIMIT 1
+`
 exports.getImageByPath = async (pathname) => {
-  {
-    const { rows } = await db.query(`
-      SELECT *
-      FROM view_images
-      WHERE pathname = $1
-        AND deleted = FALSE
-    `, [pathname])
-
-    if (rows.length) return rows[0]
+  { // search only not-deleted images
+    const { rows } = await db.query(getImageByPathQuery(true), [pathname])
+    if (rows.length) return exports.getImageById(rows[0].image_id)
   }
 
-  const { rows } = await db.query(`
-    SELECT image_id
-    FROM image_pathname_history
-    JOIN images ON image_pathname_history.image_id = images.id
-    WHERE image_pathname_history.pathname = $1
-      AND images.deleted = FALSE
-    ORDER BY image_pathname_history.created_ts DESC
-    LIMIT 1
-  `, [pathname])
-
-  if (rows.length) return exports.getImageById(rows[0].image_id)
+  { // search deleted images
+    const { rows } = await db.query(getImageByPathQuery(false), [pathname])
+    if (rows.length) return exports.getImageById(rows[0].image_id)
+  }
 
   return null
 }
+
+const filterTags = (tags, values, excluded) => tags.split(',').map(x => x.trim()).filter(Boolean)
+  .map((x) => {
+    const length = values.push(x)
+    const nameFilter = `${excluded ? 'NOT' : ''} EXISTS (
+      SELECT 1
+      FROM images_to_tags
+      JOIN tags ON images_to_tags.tag_id = tags.id
+      WHERE images_to_tags.image_id = images.id
+        AND tags.name = $${length}
+      LIMIT 1
+    )`
+
+    const idFilter = `${excluded ? 'NOT' : ''} EXISTS (
+      SELECT 1
+      FROM images_to_tags
+      WHERE tag_id = $${length}
+    )`
+
+    if (isNaN(x)) return nameFilter
+
+    return `(${nameFilter} OR ${idFilter})`
+  })
 
 exports.getImages = async (options = {}) => {
   const { limit, offset } = getLimitAndOffset(options)
@@ -112,57 +129,11 @@ exports.getImages = async (options = {}) => {
   }
 
   if (options.tags) {
-    const tagFilters = options.tags.split(',').map(x => x.trim()).filter(Boolean)
-      .map((x) => {
-        const length = values.push(x)
-        const nameFilter = `EXISTS (
-          SELECT 1
-          FROM images_to_tags
-          JOIN tags ON images_to_tags.tag_id = tags.id
-          WHERE images_to_tags.image_id = images.id
-            AND tags.name = $${length}
-          LIMIT 1
-        )`
-
-        const idFilter = `EXISTS (
-          SELECT 1
-          FROM images_to_tags
-          WHERE tag_id = $${length}
-        )`
-
-        if (isNaN(x)) return nameFilter
-
-        return `(${nameFilter} OR ${idFilter})`
-      })
-
-    filters.push(`(${tagFilters.join('\nAND\n')})`)
+    filters.push(`(${filterTags(options.tags, values, false).join('\nAND\n')})`)
   }
 
   if (options.ex_tags) {
-    const exTagFilters = options.ex_tags.split(',').map(x => x.trim()).filter(Boolean)
-      .map((x) => {
-        const length = values.push(x)
-        const nameFilter = `NOT EXISTS (
-          SELECT 1
-          FROM images_to_tags
-          JOIN tags ON images_to_tags.tag_id = tags.id
-          WHERE images_to_tags.image_id = images.id
-            AND tags.name = $${length}
-          LIMIT 1
-        )`
-
-        const idFilter = `NOT EXISTS (
-          SELECT 1
-          FROM images_to_tags
-          WHERE tag_id = $${length}
-        )`
-
-        if (isNaN(x)) return nameFilter
-
-        return `(${nameFilter} OR ${idFilter})`
-      })
-
-    filters.push(`(${exTagFilters.join('\nAND\n')})`)
+    filters.push(`(${filterTags(options.ex_tags, values, false).join('\nAND\n')})`)
   }
 
   const result = await db.query(`
