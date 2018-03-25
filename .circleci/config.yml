@@ -49,9 +49,9 @@ jobs:
       - run: npm run reset-db
       - run: npm run test:server -- --maxWorkers 4
       - *test-coverage
-      # - run: npm run test:jsdom -- --maxWorkers 2
-      # - *test-coverage
-      # - run: npm run build-storybook
+      - run: npm run test:jsdom -- --maxWorkers 2
+      - *test-coverage
+      - run: npm run build-storybook
       - *save_cache
   storybook:
     <<: *defaults
@@ -65,10 +65,10 @@ workflows:
   commit:
     jobs:
       - test
-      # - storybook:
-      #     requires:
-      #       - test
-      #     filters:
-      #       branches:
-      #         only:
-      #           - master
+      - storybook:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master

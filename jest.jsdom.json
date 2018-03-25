@@ -1,0 +1,22 @@
+{
+  "testEnvironment": "jsdom",
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "/__tests__/",
+    "/tests/",
+    "/test/",
+    ".css"
+  ],
+  "roots": [
+    "client",
+    "client-components",
+    "client-redux",
+    "client-stories",
+    "isomorphic"
+  ],
+  "cacheDirectory": ".cache/jest",
+  "transform": {
+    "\\.(css)$": "<rootDir>/node_modules/jest-css-modules",
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
+  "collectCoverage": true

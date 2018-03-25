@@ -19,3 +19,4 @@ tmp/
 .nyc_output
 .cache
 lcov.dat
+storybook-static

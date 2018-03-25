@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint . --fix --cache",
+    "eslint": "eslint . .storybook --fix --cache",
     "reset-db": "node server/psql/reset-db",
-    "test:server": "jest --config jest.server.json"
+    "test:jsdom": "jest --config jest.jsdom.json",
+    "test:server": "jest --config jest.server.json",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +25,19 @@
     "temp-path": "^1.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-links": "^3.3.15",
+    "@storybook/addon-storyshots": "^3.3.15",
+    "@storybook/react": "^3.3.15",
+    "@storybook/storybook-deployer": "^2.3.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react-app": "^3.1.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "classnames": "^2.2.5",
     "eslint": "^4.19.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
@@ -31,6 +47,10 @@
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.4.3",
+    "jest-css-modules": "^1.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
     "request": "^2.85.0"
   }
 }
