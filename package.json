@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint . .storybook --fix --cache --cache-location .cache/eslint",
-    "stylelint": "stylelint 'client/**/*.css' 'stories/**/*.css' --fix --cache --cache-location .cache/stylelint",
+    "eslint": "eslint . .storybook --fix --cache --cache-location .cache/eslint --ignore-path .gitignore",
+    "stylelint": "stylelint 'client/**/*.css' 'stories/**/*.css' --fix --cache --cache-location .cache/stylelint --ignore-path .gitignore",
     "reset-db": "node server/psql/reset-db",
     "test:jsdom": "jest --config jest.jsdom.json",
     "test:server": "jest --config jest.server.json",
