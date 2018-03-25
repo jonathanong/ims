@@ -2,5 +2,6 @@
 extends:
   - standard
   - standard-react
+parser: babel-eslint
 rules:
   camelcase: 0

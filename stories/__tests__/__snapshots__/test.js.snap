@@ -1,5 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots ImageDetailsPage w/ Google Logo 1`] = `
+<div
+  className={undefined}
+>
+  <main
+    className={undefined}
+  >
+    <a
+      className={undefined}
+      href="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      target="_blank"
+    >
+      <img
+        alt="z5vn9gr3wja"
+        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      />
+    </a>
+    <a
+      className={undefined}
+      href="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      target="_blank"
+    >
+      <img
+        alt="z5vn9gr3wja"
+        src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      />
+    </a>
+  </main>
+  <div
+    className={undefined}
+  >
+    <aside
+      className={undefined}
+    >
+      <h6>
+        Metadata
+      </h6>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              Width
+            </td>
+            <td>
+              544
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Height
+            </td>
+            <td>
+              184
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Format
+            </td>
+            <td>
+              PNG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Color Space
+            </td>
+            <td>
+              SRGB
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Has Alpha Channel
+            </td>
+            <td>
+              Yes
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Is Transparent
+            </td>
+            <td>
+              Yes
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </aside>
+    <aside
+      className={undefined}
+    >
+      <h6>
+        Tags
+      </h6>
+      <ul>
+        <li>
+          google
+        </li>
+        <li>
+          logo
+        </li>
+      </ul>
+    </aside>
+  </div>
+</div>
+`;
+
 exports[`Storyshots UI Typography 1`] = `
 <div
   style={
