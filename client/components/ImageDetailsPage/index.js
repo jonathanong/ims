@@ -40,34 +40,36 @@ export default class ImageDetailsPage extends PureComponent {
     return (
       <aside className={styles.asideDetails}>
         <h6>Metadata</h6>
-        <table>
-          <tbody>
-            <tr>
-              <td>Width</td>
-              <td>{image.width}</td>
-            </tr>
-            <tr>
-              <td>Height</td>
-              <td>{image.height}</td>
-            </tr>
-            <tr>
-              <td>Format</td>
-              <td>{image.format.toUpperCase()}</td>
-            </tr>
-            <tr>
-              <td>Color Space</td>
-              <td>{image.space.toUpperCase()}</td>
-            </tr>
-            <tr>
-              <td>Has Alpha Channel</td>
-              <td>{image.has_alpha ? 'Yes' : 'No'}</td>
-            </tr>
-            <tr>
-              <td>Is Transparent</td>
-              <td>{image.is_opaque ? 'No' : 'Yes'}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className={styles.asideDetailsTableWrapper}>
+          <table>
+            <tbody>
+              <tr>
+                <td>Width</td>
+                <td>{image.width}</td>
+              </tr>
+              <tr>
+                <td>Height</td>
+                <td>{image.height}</td>
+              </tr>
+              <tr>
+                <td>Format</td>
+                <td>{image.format.toUpperCase()}</td>
+              </tr>
+              <tr>
+                <td>Color Space</td>
+                <td>{image.space.toUpperCase()}</td>
+              </tr>
+              <tr>
+                <td>Has Alpha Channel</td>
+                <td>{image.has_alpha ? 'Yes' : 'No'}</td>
+              </tr>
+              <tr>
+                <td>Is Transparent</td>
+                <td>{image.is_opaque ? 'No' : 'Yes'}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </aside>
     )
   }

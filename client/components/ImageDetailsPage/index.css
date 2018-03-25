@@ -59,6 +59,16 @@
   margin-bottom: 1rem;
 }
 
+.asideDetails {
+
+}
+
+.asideDetailsTableWrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .asideDetails > table {
   max-width: 100%;
 }

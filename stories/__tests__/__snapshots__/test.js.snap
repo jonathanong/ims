@@ -37,58 +37,62 @@ exports[`Storyshots ImageDetailsPage w/ Google Logo 1`] = `
       <h6>
         Metadata
       </h6>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              Width
-            </td>
-            <td>
-              544
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Height
-            </td>
-            <td>
-              184
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Format
-            </td>
-            <td>
-              PNG
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Color Space
-            </td>
-            <td>
-              SRGB
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Has Alpha Channel
-            </td>
-            <td>
-              Yes
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Is Transparent
-            </td>
-            <td>
-              Yes
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div
+        className={undefined}
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                Width
+              </td>
+              <td>
+                544
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Height
+              </td>
+              <td>
+                184
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Format
+              </td>
+              <td>
+                PNG
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Color Space
+              </td>
+              <td>
+                SRGB
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Has Alpha Channel
+              </td>
+              <td>
+                Yes
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Is Transparent
+              </td>
+              <td>
+                Yes
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </aside>
     <aside
       className={undefined}
