@@ -32,7 +32,6 @@
   display: inline-block;
   margin: 1rem;
   border: 1px solid #ccc;
-
   line-height: 0;
   font-size: 0;
 }
@@ -79,7 +78,7 @@
   text-align: right;
 }
 
-.asideDetails td:first-child:after {
+.asideDetails td:first-child::after {
   content: ':';
 }
 
