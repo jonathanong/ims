@@ -35,7 +35,7 @@ exports.getTagsWithCounts = () => db.query(`
     tags.name AS name,
     COUNT(*) AS images
   FROM tags
-  JOIN images_to_tags ON images_to_tags.tag_id = tags.id
+  LEFT OUTER JOIN images_to_tags ON images_to_tags.tag_id = tags.id
   GROUP BY 1
   ORDER BY 3 DESC
 `).then(x => x.rows)
