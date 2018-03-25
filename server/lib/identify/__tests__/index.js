@@ -5,7 +5,7 @@ const assert = require('assert')
 const identify = require('..')
 const {
   download
-} = require('../../utils')
+} = require('../../../utils')
 
 const TEST_IMAGE = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
 

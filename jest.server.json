@@ -7,11 +7,7 @@
     "/test/"
   ],
   "roots": [
-    "server",
-    "server-api",
-    "server-controllers",
-    "server-lib",
-    "server-model"
+    "server"
   ],
   "cacheDirectory": ".cache/jest",
   "collectCoverage": true

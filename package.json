@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "eslint": "eslint . --fix --cache",
-    "reset-db": "node psql/reset-db",
+    "reset-db": "node server/psql/reset-db",
     "test:server": "jest --config jest.server.json"
   },
   "author": "",

@@ -1,9 +1,9 @@
 
 const assert = require('assert')
 
-const { getLimitAndOffset } = require('../../server-lib/utils')
-const sanitize = require('../../server-lib/utils/sanitize')
-const { formats } = require('../../server-lib/config')
+const { getLimitAndOffset } = require('../../utils')
+const sanitize = require('../../utils/sanitize')
+const { formats } = require('../../lib/config')
 const db = require('../../psql')
 
 exports.createImage = async (key, metadata) => {

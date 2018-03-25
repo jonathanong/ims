@@ -2,11 +2,11 @@
 const request = require('request')
 const assert = require('assert')
 
-const identify = require('../../../server-lib/identify')
+const identify = require('../../../lib/identify')
 const {
   download,
   randomString
-} = require('../../../server-lib/utils')
+} = require('../../../utils')
 const {
   createImage,
   getImageById,

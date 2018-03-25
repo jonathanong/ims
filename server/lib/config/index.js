@@ -24,6 +24,7 @@ assert(exports.s3.params.Bucket)
 
 assert(exports.imgix.subdomain)
 
+// as supported by sharp
 exports.formats = [
   'jpeg',
   'png',
