@@ -97,3 +97,9 @@ test('deleteImageTags(imageId, tagIds)', async () => {
   image = await getImageById(image.id)
   assert(!image.tags.length)
 })
+
+test('getTagsWithCounts()', async () => {
+  const tags = await getTagsWithCounts()
+  assert(Array.isArray(tags))
+  assert(tags.length)
+})
