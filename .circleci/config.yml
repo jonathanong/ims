@@ -64,7 +64,11 @@ workflows:
   version: 2
   commit:
     jobs:
-      - test
+      - test:
+        filters:
+          branches:
+            ignore:
+              - gh-pages
       - storybook:
           requires:
             - test
