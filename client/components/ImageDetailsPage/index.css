@@ -1,6 +1,6 @@
 
 .container {
-
+  flex: 1 0 auto;
 }
 
 .main {
@@ -18,8 +18,9 @@
   }
 
   .main {
-    flex: 0 1 auto;
+    flex: 0 1 calc(100% - 20rem);
     border-right: 1px solid #ddd;
+    background-color: #e2e2e2;
   }
 
   .asides {
@@ -29,8 +30,11 @@
 
 .imageWrapper {
   display: inline-block;
-  border: 1px solid #ccc;
   margin: 1rem;
+  border: 1px solid #ccc;
+
+  line-height: 0;
+  font-size: 0;
 }
 
 .imageWrapperLight {
@@ -41,13 +45,6 @@
 .imageWrapperDark {
   composes: imageWrapper;
   background-color: #000;
-}
-
-.imageWrapper > img {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-  max-height: 500px;
 }
 
 .asides > aside {
