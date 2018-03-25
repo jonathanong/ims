@@ -4,7 +4,7 @@ const uniq = require('lodash/uniq')
 const sanitize = require('../../utils/sanitize').tag
 const db = require('../../psql')
 
-exports.upsertTags = async (imageId, tagNames) => {
+exports.upsertImageTags = async (imageId, tagNames) => {
   const names = uniq(tagNames.map(sanitize))
 
   const { rows } = await db.query(`
@@ -39,3 +39,14 @@ exports.getTagsWithCounts = () => db.query(`
   GROUP BY 1
   ORDER BY 3 DESC
 `).then(x => x.rows)
+
+exports.deleteImageTags = async (imageId, tagIds) => {
+  const ids = tagIds.map(x => ~~x).filter(x => x > 0)
+  if (!ids.length) return
+
+  await db.query(`
+    DELETE FROM images_to_tags
+    WHERE image_id = $1
+      AND tag_id IN (${Array.from({ length: ids.length }, (x, i) => `$${i + 2}`).join(',')})
+  `, [imageId].concat(ids))
+}

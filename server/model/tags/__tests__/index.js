@@ -13,7 +13,8 @@ const {
 } = require('../../../utils')
 const {
   getTagsWithCounts,
-  upsertTags
+  upsertImageTags,
+  deleteImageTags
 } = require('..')
 
 const TEST_IMAGE = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png'
@@ -51,8 +52,8 @@ test('getTagsWithCounts()', async () => {
   assert(Array.isArray(tags))
 })
 
-test('upsertTags(imageId, tagNames)', async () => {
-  const tags = await upsertTags(image.id, [
+test('upsertImageTags(imageId, tagNames)', async () => {
+  const tags = await upsertImageTags(image.id, [
     'tag 1',
     'tag 2'
   ])
@@ -69,8 +70,8 @@ test('image.tags', async () => {
   assert(image.tags.some(x => x.name === 'tag 2'))
 })
 
-test('upsertTags(imageId, tagNames)', async () => {
-  const tags = await upsertTags(image.id, [
+test('upsertImageTags(imageId, tagNames)', async () => {
+  const tags = await upsertImageTags(image.id, [
     'tag 1',
     'tag 2',
     'tag 3',
@@ -89,4 +90,10 @@ test('image.tags', async () => {
   assert(image.tags.some(x => x.name === 'tag 2'))
   assert(image.tags.some(x => x.name === 'tag 3'))
   assert(image.tags.some(x => x.name === 'tag 4'))
+})
+
+test('deleteImageTags(imageId, tagIds)', async () => {
+  await deleteImageTags(image.id, image.tags.map(x => x.id))
+  image = await getImageById(image.id)
+  assert(!image.tags.length)
 })
