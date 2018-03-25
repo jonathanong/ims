@@ -59,3 +59,8 @@ export const ANNA_KENDRICK_IMAGE = {
     }
   ]
 }
+
+export default [
+  GOOGLE_LOGO_IMAGE,
+  ANNA_KENDRICK_IMAGE
+]

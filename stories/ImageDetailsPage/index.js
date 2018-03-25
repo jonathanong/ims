@@ -8,7 +8,7 @@ import '../../client/ui/index.css'
 import {
   GOOGLE_LOGO_IMAGE,
   ANNA_KENDRICK_IMAGE
-} from './fixtures'
+} from '../fixtures/images'
 
 storiesOf('ImageDetailsPage', module)
   .add('w/ Google Logo', () => (
