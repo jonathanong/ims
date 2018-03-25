@@ -35,7 +35,7 @@ exports.query = (query, values) => {
   return client.query(query, values).catch((err) => {
     console.error('ERROR: query failed!')
     console.error(query)
-    if (Array.isArray(values)) console.error(values)
+    if (process.env.NODE_ENV !== 'production' && Array.isArray(values)) console.error(values)
     console.error(err)
     throw err
   })
