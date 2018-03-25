@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots UI Typography 1`] = `
+<div
+  style={
+    Object {
+      "padding": "1rem",
+    }
+  }
+>
+  <h1>
+    Header h1
+  </h1>
+  <h2>
+    Header h2
+  </h2>
+  <h3>
+    Header h3
+  </h3>
+  <h4>
+    Header h4
+  </h4>
+  <h5>
+    Header h5
+  </h5>
+  <h6>
+    Header h6
+  </h6>
+  <hr />
+  <p>
+    Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. 
+  </p>
+  <hr />
+  <p>
+    Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. 
+  </p>
+  <ul>
+    <li>
+      An item in an unordered list.
+    </li>
+    <li>
+      An item in an unordered list.
+    </li>
+    <li>
+      An item in an unordered list.
+    </li>
+    <li>
+      An item in an unordered list.
+    </li>
+  </ul>
+  <ol>
+    <li>
+      An item in an ordered list.
+    </li>
+    <li>
+      An item in an ordered list.
+    </li>
+    <li>
+      An item in an ordered list.
+    </li>
+    <li>
+      An item in an ordered list.
+    </li>
+  </ol>
+</div>
+`;

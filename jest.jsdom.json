@@ -9,10 +9,7 @@
   ],
   "roots": [
     "client",
-    "client-components",
-    "client-redux",
-    "client-stories",
-    "isomorphic"
+    "stories"
   ],
   "cacheDirectory": ".cache/jest",
   "transform": {
@@ -20,3 +17,4 @@
     "\\.js$": "<rootDir>/node_modules/babel-jest"
   },
   "collectCoverage": true
+}
