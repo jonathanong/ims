@@ -153,7 +153,7 @@ exports.getImages = async (options = {}) => {
 
     SELECT view_images.*
     FROM view_images
-    JOIN image_ids ON image_ids.id = view_images.id
+    RIGHT JOIN image_ids ON image_ids.id = view_images.id
   `, values)
 
   return result.rows
