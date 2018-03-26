@@ -37,6 +37,16 @@ storiesOf('ImageGrid', module)
   ))
   .add('w/ 8 images', () => (
     <Container>
-      <ImageGrid images={createImages(3)} />
+      <ImageGrid images={createImages(4)} />
+    </Container>
+  ))
+  .add('w/ 16 images', () => (
+    <Container>
+      <ImageGrid images={createImages(8)} />
+    </Container>
+  ))
+  .add('w/ 32 images', () => (
+    <Container>
+      <ImageGrid images={createImages(16)} />
     </Container>
   ))
