@@ -1,9 +1,6 @@
 
 import './ui/index.css'
 import './polyfills'
+import onError from './on-error'
 
-import { render } from 'react-dom'
-import React from 'react'
-import App from './App'
-
-render(<App />, document.querySelector('#root'))
+import(/* webpackChunkName: "render" */ './render').catch(onError)
