@@ -8,7 +8,10 @@ import styles from './index.css'
 export default class ImageSearchPanel extends PureComponent {
   static propTypes = {
     formats: PropTypes.array,
-    onFormatChange: PropTypes.func
+    onFormatChange: PropTypes.func,
+    validTags: PropTypes.array, // all possible valid tags
+    tags: PropTypes.array, // currently selected tags' ID
+    onTagChange: PropTypes.func
   }
 
   renderFilterFormats () {
@@ -33,10 +36,28 @@ export default class ImageSearchPanel extends PureComponent {
     )
   }
 
+  renderFilterTags () {
+    const { validTags, tags, onTagChange } = this.props
+
+    return (
+      <fieldset>
+        <legend>Tags</legend>
+
+        {validTags.map((tag) => (
+          <label className='checkbox-group' key={tag.id}>
+            <input name={`tag-${tag.id}`} type='checkbox' checked={tags.includes(tag.id)} onChange={onTagChange} />
+            <span>{tag.name}</span>
+          </label>
+        ))}
+      </fieldset>
+    )
+  }
+
   render () {
     return (
       <form className={styles.container}>
         {this.renderFilterFormats()}
+        {this.renderFilterTags()}
       </form>
     )
   }

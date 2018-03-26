@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 import uniq from 'lodash/uniq'
 
 import { supported_image_formats } from '../../isomorphic/constants.json'
+import tags from '../fixtures/tags'
+
+const validTags = tags.sort((a, b) => a.name.localeCompare(b.name))
 
 export default class Container extends PureComponent {
   static propTypes = {
@@ -11,7 +14,8 @@ export default class Container extends PureComponent {
   }
 
   state = {
-    formats: []
+    formats: [],
+    tags: []
   }
 
   onFormatChange = (e) => {
@@ -32,10 +36,24 @@ export default class Container extends PureComponent {
     })
   }
 
+  onTagChange = (e) => {
+    const { target } = e
+    const id = ~~target.name.replace(/^tag-/, '')
+    let tags = this.state.tags.slice()
+    if (target.checked) tags = tags.concat(id)
+    else tags = tags.filter(x => x !== id)
+
+    this.setState({
+      tags: uniq(tags)
+    })
+  }
+
   render () {
     return React.cloneElement(this.props.children, {
+      validTags,
       ...this.state,
-      onFormatChange: this.onFormatChange
+      onFormatChange: this.onFormatChange,
+      onTagChange: this.onTagChange
     })
   }
 }
