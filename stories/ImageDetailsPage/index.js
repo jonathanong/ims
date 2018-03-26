@@ -1,4 +1,5 @@
 
+import { checkA11y } from '@storybook/addon-a11y'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
@@ -11,6 +12,7 @@ import {
 } from '../fixtures/images'
 
 storiesOf('ImageDetailsPage', module)
+  .addDecorator(checkA11y)
   .add('w/ Google Logo', () => (
     <Container>
       <ImageDetailsPage image={GOOGLE_LOGO_IMAGE} />

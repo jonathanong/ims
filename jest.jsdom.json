@@ -18,7 +18,7 @@
   ],
   "cacheDirectory": ".cache/jest",
   "transform": {
-    "\\.(css)$": "<rootDir>/node_modules/jest-css-modules",
+    "\\.css$": "<rootDir>/node_modules/jest-css-modules",
     "\\.js$": "<rootDir>/node_modules/babel-jest"
   },
   "collectCoverage": true

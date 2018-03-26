@@ -1,10 +1,12 @@
 
+import { checkA11y } from '@storybook/addon-a11y'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
 import '../../client/ui/index.css'
 
 storiesOf('UI', module)
+  .addDecorator(checkA11y)
   .add('Typography', () => (
     <div style={{
       padding: '1rem'

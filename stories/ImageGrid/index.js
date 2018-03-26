@@ -1,4 +1,5 @@
 
+import { checkA11y } from '@storybook/addon-a11y'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
@@ -20,6 +21,7 @@ function createImages (i) {
 }
 
 storiesOf('ImageGrid', module)
+  .addDecorator(checkA11y)
   .add('w/ 0 images', () => (
     <Container>
       <ImageGrid images={[]} />
