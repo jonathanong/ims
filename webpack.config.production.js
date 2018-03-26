@@ -55,7 +55,7 @@ module.exports = {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: '[name].[hash].css',
-      chunkFilename: '[id].[hash].css'
+      chunkFilename: '[name].[hash].css'
     }),
     new ManifestPlugin({
       fileName: 'asset-manifest.json'
