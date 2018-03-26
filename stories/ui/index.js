@@ -2,7 +2,7 @@
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import '../client/ui/index.css'
+import '../../client/ui/index.css'
 
 storiesOf('UI', module)
   .add('Typography', () => (
@@ -38,4 +38,27 @@ storiesOf('UI', module)
         <li>An item in an ordered list.</li>
       </ol>
     </div>
+  ))
+  .add('Forms', () => (
+    <form style={{
+      padding: '1rem'
+    }}>
+      <fieldset>
+        <legend>This is a sample fieldset</legend>
+        <div className='control-group'>
+          <label htmlFor='search'>Please search in this text box</label>
+          <input type='search' name='search' id='search' placeholder='Search here' required />
+        </div>
+
+        <div className='control-group'>
+          <label htmlFor='email'>Please type your email in this text box</label>
+          <input type='email' name='email' id='email' placeholder='Email Address' required />
+        </div>
+
+        <div className='control-group'>
+          <label htmlFor='password'>Please type your password in this text box</label>
+          <input type='password' name='password' id='password' placeholder='Password' required />
+        </div>
+      </fieldset>
+    </form>
   ))

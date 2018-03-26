@@ -2036,6 +2036,70 @@ exports[`Storyshots TopNav guest 1`] = `
 </div>
 `;
 
+exports[`Storyshots UI Forms 1`] = `
+<form
+  style={
+    Object {
+      "padding": "1rem",
+    }
+  }
+>
+  <fieldset>
+    <legend>
+      This is a sample fieldset
+    </legend>
+    <div
+      className="control-group"
+    >
+      <label
+        htmlFor="search"
+      >
+        Please search in this text box
+      </label>
+      <input
+        id="search"
+        name="search"
+        placeholder="Search here"
+        required={true}
+        type="search"
+      />
+    </div>
+    <div
+      className="control-group"
+    >
+      <label
+        htmlFor="email"
+      >
+        Please type your email in this text box
+      </label>
+      <input
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        required={true}
+        type="email"
+      />
+    </div>
+    <div
+      className="control-group"
+    >
+      <label
+        htmlFor="password"
+      >
+        Please type your password in this text box
+      </label>
+      <input
+        id="password"
+        name="password"
+        placeholder="Password"
+        required={true}
+        type="password"
+      />
+    </div>
+  </fieldset>
+</form>
+`;
+
 exports[`Storyshots UI Typography 1`] = `
 <div
   style={

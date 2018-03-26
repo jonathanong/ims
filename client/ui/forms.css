@@ -1,0 +1,36 @@
+
+fieldset {
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  font-size: 90%;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+:global(.control-group) {
+  margin: 0.5rem 0;
+}
+
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
