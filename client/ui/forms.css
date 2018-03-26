@@ -19,10 +19,6 @@ label {
   margin-bottom: 0.25rem;
 }
 
-:global(.control-group) {
-  margin: 0.5rem 0;
-}
-
 input,
 textarea {
   -webkit-appearance: none;
@@ -33,4 +29,25 @@ textarea {
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
+}
+
+input {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+:global(.control-group) {
+  margin: 0.5rem 0;
+}
+
+:global(.checkbox-group) {
+
+}
+
+:global(.checkbox-group) > input[type='checkbox']{
+
+}
+
+:global(.checkbox-group) > span {
+  margin-left: 0.5rem;
 }

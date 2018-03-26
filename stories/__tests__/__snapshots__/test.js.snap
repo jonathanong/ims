@@ -2096,6 +2096,37 @@ exports[`Storyshots UI Forms 1`] = `
         type="password"
       />
     </div>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        defaultChecked={true}
+        type="checkbox"
+      />
+      <span>
+        Check me please.
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        type="checkbox"
+      />
+      <span>
+        Check me please.
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        type="checkbox"
+      />
+      <span>
+        Check me please.
+      </span>
+    </label>
   </fieldset>
 </form>
 `;

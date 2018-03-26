@@ -59,6 +59,21 @@ storiesOf('UI', module)
           <label htmlFor='password'>Please type your password in this text box</label>
           <input type='password' name='password' id='password' placeholder='Password' required />
         </div>
+
+        <label className='checkbox-group'>
+          <input type='checkbox' defaultChecked />
+          <span>Check me please.</span>
+        </label>
+
+        <label className='checkbox-group'>
+          <input type='checkbox' />
+          <span>Check me please.</span>
+        </label>
+
+        <label className='checkbox-group'>
+          <input type='checkbox' />
+          <span>Check me please.</span>
+        </label>
       </fieldset>
     </form>
   ))
