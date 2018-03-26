@@ -1,10 +1,14 @@
 {
   "testEnvironment": "node",
+  "collectCoverageFrom": [
+    "**/*.js"
+  ],
   "coveragePathIgnorePatterns": [
     "/node_modules/",
     "/__tests__/",
     "/tests/",
-    "/test/"
+    "/test/",
+    "/vendor/"
   ],
   "roots": [
     "isomorphic",

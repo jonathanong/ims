@@ -1,10 +1,14 @@
 {
   "testEnvironment": "jsdom",
+  "collectCoverageFrom": [
+    "**/*.js"
+  ],
   "coveragePathIgnorePatterns": [
     "/node_modules/",
     "/__tests__/",
     "/tests/",
     "/test/",
+    "/vendor/",
     ".css"
   ],
   "roots": [
