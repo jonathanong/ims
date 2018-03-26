@@ -4,8 +4,8 @@
   "description": "An image management system for your static assets",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint . .storybook --fix --cache --cache-location .cache/eslint --ignore-path .gitignore",
-    "stylelint": "stylelint 'client/**/*.css' 'stories/**/*.css' --fix --cache --cache-location .cache/stylelint --ignore-path .gitignore",
+    "eslint": "eslint . .storybook --cache --cache-location .cache/eslint --ignore-path .gitignore",
+    "stylelint": "stylelint 'client/**/*.css' 'stories/**/*.css' --cache --cache-location .cache/stylelint --ignore-path .gitignore",
     "migrate": "node server/psql/migrate",
     "reset-db": "node server/psql/reset-db",
     "test:jsdom": "jest --config jest.jsdom.json",
