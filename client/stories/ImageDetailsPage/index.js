@@ -3,9 +3,8 @@ import { checkA11y } from '@storybook/addon-a11y'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import ImageDetailsPage from '../../client/components/ImageDetailsPage'
+import ImageDetailsPage from '../../components/ImageDetailsPage'
 import Container from './Container'
-import '../../client/ui/index.css'
 import {
   GOOGLE_LOGO_IMAGE,
   ANNA_KENDRICK_IMAGE

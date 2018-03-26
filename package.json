@@ -1,7 +1,7 @@
 {
   "name": "ims",
   "version": "1.0.0",
-  "description": "",
+  "description": "An image management system for your static assets",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint . .storybook --fix --cache --cache-location .cache/eslint --ignore-path .gitignore",
@@ -13,8 +13,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
+  "license": "MIT",
   "dependencies": {
     "aws-sdk": "^2.213.1",
     "fs-cp": "^1.4.0",

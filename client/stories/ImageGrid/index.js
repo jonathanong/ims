@@ -3,10 +3,9 @@ import { checkA11y } from '@storybook/addon-a11y'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import ImageGrid from '../../client/components/ImageGrid'
+import ImageGrid from '../../components/ImageGrid'
 import images from '../fixtures/images'
 import Container from './Container'
-import '../../client/ui/index.css'
 
 function createImages (i) {
   if (!i) return 0

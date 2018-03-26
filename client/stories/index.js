@@ -1,4 +1,6 @@
 
+import '../ui/index.css'
+
 import './ui'
 import './TopNav'
 import './ImageDetailsPage'

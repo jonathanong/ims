@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import uniq from 'lodash/uniq'
 
-import { supported_image_formats } from '../../isomorphic/constants.json'
+import { supported_image_formats } from '../../../isomorphic/constants.json'
 import tags from '../fixtures/tags'
 
 const validTags = tags.sort((a, b) => a.name.localeCompare(b.name))

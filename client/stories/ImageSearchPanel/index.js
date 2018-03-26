@@ -3,7 +3,7 @@ import { checkA11y } from '@storybook/addon-a11y'
 import { storiesOf } from '@storybook/react'
 import React from 'react'
 
-import ImageSearchPanel from '../../client/components/ImageSearchPanel'
+import ImageSearchPanel from '../../components/ImageSearchPanel'
 import Container from './Container'
 
 storiesOf('ImageSearchPanel', module)
