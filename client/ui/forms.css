@@ -8,7 +8,7 @@ legend {
   width: 100%;
   margin-bottom: 0.5rem;
   border-bottom: 1px solid #ccc;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 
@@ -17,13 +17,13 @@ label {
   font-size: 90%;
   font-weight: 500;
   margin-bottom: 0.25rem;
+  cursor: pointer;
 }
 
 input,
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  display: inline-block;
+  max-width: 100%;
   padding: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   font-size: inherit;
@@ -31,9 +31,10 @@ textarea {
   line-height: inherit;
 }
 
-input {
-  display: inline-block;
-  vertical-align: bottom;
+input[type='checkbox'] {
+  vertical-align: top;
+  margin-top: 0.2rem;
+  cursor: pointer;
 }
 
 :global(.control-group) {

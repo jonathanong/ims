@@ -9,6 +9,7 @@
   ],
   "roots": [
     "client",
+    "isomorphic",
     "stories"
   ],
   "cacheDirectory": ".cache/jest",

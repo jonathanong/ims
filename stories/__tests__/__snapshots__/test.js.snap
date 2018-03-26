@@ -2022,6 +2022,96 @@ exports[`Storyshots ImageGrid w/ 32 images 1`] = `
 </div>
 `;
 
+exports[`Storyshots ImageSearchPanel default filters 1`] = `
+<form
+  className={undefined}
+>
+  <fieldset>
+    <legend>
+      Image Formats
+    </legend>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="all"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        All
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="jpeg"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        JPEG
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="png"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        PNG
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="svg"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        SVG
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="gif"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        GIF
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="webp"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        WEBP
+      </span>
+    </label>
+  </fieldset>
+</form>
+`;
+
 exports[`Storyshots TopNav guest 1`] = `
 <div
   className={undefined}

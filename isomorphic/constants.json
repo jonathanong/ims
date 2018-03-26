@@ -1,0 +1,9 @@
+{
+  "supported_image_formats": [
+    "jpeg",
+    "png",
+    "svg",
+    "gif",
+    "webp"
+  ]
+}

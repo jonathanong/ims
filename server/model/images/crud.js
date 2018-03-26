@@ -1,9 +1,9 @@
 
 const assert = require('assert')
 
+const { supported_image_formats } = require('../../../isomorphic/constants')
 const { getLimitAndOffset } = require('../../utils')
 const sanitize = require('../../utils/sanitize')
-const { formats } = require('../../lib/config')
 const db = require('../../psql')
 
 exports.createImage = async (key, metadata) => {
@@ -129,7 +129,7 @@ exports.getImages = async (options = {}) => {
   if (options.formats) {
     const x = options.formats.toLowerCase().split(',').map(x => x.trim())
     assert(x.length, 'Null list of image formats.')
-    x.forEach(y => assert(formats.includes(y), `Invalid image format: ${y}`))
+    x.forEach(y => assert(supported_image_formats.includes(y), `Invalid image format: ${y}`))
     filters.push(`images.format IN (${x.map(y => `'${y}'`).join(',')})`)
   }
 
