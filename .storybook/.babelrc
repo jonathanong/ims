@@ -1,9 +1,0 @@
-{
-  "presets": [
-    "react-app",
-    "stage-2"
-  ],
-  "plugins": [
-    "transform-runtime"
-  ]
-}

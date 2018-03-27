@@ -1,5 +1,6 @@
 {
-  "testEnvironment": "node",
+  "cacheDirectory": "node_modules/.cache/jest",
+  "collectCoverage": true,
   "collectCoverageFrom": [
     "**/*.js"
   ],
@@ -14,6 +15,5 @@
     "isomorphic",
     "server"
   ],
-  "cacheDirectory": ".cache/jest",
-  "collectCoverage": true
+  "testEnvironment": "node"
 }

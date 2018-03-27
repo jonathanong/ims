@@ -1,5 +1,6 @@
 {
-  "testEnvironment": "jsdom",
+  "cacheDirectory": "node_modules/.cache/jest",
+  "collectCoverage": true,
   "collectCoverageFrom": [
     "**/*.js"
   ],
@@ -15,10 +16,12 @@
     "client",
     "isomorphic"
   ],
-  "cacheDirectory": ".cache/jest",
+  "testEnvironment": "jsdom",
   "transform": {
     "\\.css$": "<rootDir>/node_modules/jest-css-modules",
     "\\.js$": "<rootDir>/node_modules/babel-jest"
   },
-  "collectCoverage": true
+  "transformIgnorePatterns": [
+    "/node_modules/.*\\.js$"
+  ]
 }
