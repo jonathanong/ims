@@ -7,3 +7,5 @@ const routes = module.exports = []
 routes.push(route('/ping').get(ctx => {
   ctx.body = 'pong'
 }))
+
+routes.push(...require('./app'))

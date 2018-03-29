@@ -17,7 +17,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js',
-    chunkFilename: '[name].[hash].js'
+    chunkFilename: '[name].[hash].js',
+    publicPath: '/assets'
   },
   module: {
     rules: [
@@ -63,6 +64,18 @@ module.exports = {
     new Visualizer()
   ],
   optimization: {
+    splitChunks: {
+      cacheGroups: {
+        // https://github.com/webpack-contrib/mini-css-extract-plugin#features
+        // We don't have enough CSS to care about code splitting CSS
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    },
     minimizer: [
       new UglifyJsPlugin({
         sourceMap: true,

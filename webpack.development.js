@@ -5,6 +5,8 @@ const path = require('path')
 
 process.env.NODE_ENV = 'development'
 
+const devServer = !!process.env.WEBPACK_DEV_SERVER
+
 module.exports = {
   mode: 'development',
   entry: {
@@ -13,7 +15,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    chunkFilename: '[name].js'
+    chunkFilename: '[name].js',
+    publicPath: devServer ? 'http://localhost:3691/assets/' : '/assets/'
   },
   module: {
     rules: [
