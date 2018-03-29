@@ -57,7 +57,7 @@ mixin detect-ie
 
 mixin head
   if !devServer
-    link(rel='stylesheet' href=`/assets/${manifest['index.css']}`)
+    link(rel='stylesheet' href=manifest['index.css'])
   script.
     document.documentElement.classList.add('js')
   +rollbar
@@ -67,4 +67,4 @@ mixin butt
   if devServer
     script(src=`http://localhost:3691/assets/index.js`)
   else
-    script(src=`/assets/${manifest['index.js']}`)
+    script(src=manifest['index.js'])
