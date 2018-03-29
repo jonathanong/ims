@@ -25,6 +25,16 @@ const getManifest = () => {
   return manifest
 }
 
+const rollbarConfig = {
+  accessToken: '',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+  enabled: true,
+  payload: {
+    environment: env
+  }
+}
+
 module.exports = (ctx) => {
   const hostname = ctx.request.get('x-forwarded-host') || ctx.hostname
   return pug.renderFile(TEMPLATE_FILENAME, {
@@ -32,6 +42,7 @@ module.exports = (ctx) => {
     env,
     devServer,
     manifest: manifest || getManifest(),
-    hostname
+    hostname,
+    rollbarConfig
   })
 }
