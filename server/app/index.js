@@ -36,7 +36,7 @@ app.use(serve(path.resolve('public'), {
 
 // serve the built files on /_assets/
 app.use(mount('/assets', compose([
-  serve(path.resolve('build'), {
+  serve(path.resolve('dist'), {
     maxage: 86400 * 1000,
     hidden: false,
     index: false
