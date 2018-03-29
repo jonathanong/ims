@@ -10,13 +10,12 @@
     "reset-db": "node server/psql/reset-db",
     "test:jsdom": "jest --config jest.jsdom.json",
     "test:server": "jest --config jest.server.json",
-    "watch": "npx webpack-dev-server --config webpack.config.development.js --hot",
-    "build": "npx webpack --config webpack.config.production.js"
+    "watch": "npx webpack-dev-server --config webpack.development.js --hot",
+    "build": "npx webpack --config webpack.production.js"
   },
   "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.213.1",
     "fs-cp": "^1.4.0",
     "http-errors": "^1.6.2",
     "lodash": "^4.17.5",
@@ -27,6 +26,7 @@
     "temp-path": "^1.0.0"
   },
   "devDependencies": {
+    "aws-sdk": "^2.216.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
     "babel-jest": "^22.4.3",
@@ -50,7 +50,7 @@
     "ims-storybook": "^1.0.1",
     "jest": "^22.4.3",
     "jest-css-modules": "^1.1.0",
-    "mini-css-extract-plugin": "^0.2.0",
+    "mini-css-extract-plugin": "^0.3.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -63,7 +63,7 @@
     "stylelint-config-css-modules": "^1.2.0",
     "stylelint-config-standard": "^18.2.0",
     "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.2.0",
+    "webpack": "^4.3.0",
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^3.1.1",
     "webpack-manifest-plugin": "^2.0.0-rc.2",

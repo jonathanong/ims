@@ -69,7 +69,7 @@ module.exports = {
         parallel: true,
         cache: true,
         uglifyOptions: {
-          mangle: false,
+          mangle: true,
           output: {
             comments: false
           }
