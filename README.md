@@ -12,6 +12,26 @@ IMS is an image management system designed for managing your static assets. It's
   - AWS CloudFront
   - CloudFlare
 
+## Commands
+
+- Starting the server in development mode:
+  - `npm start` - starts the nodejs app
+  - `npm run dev-server` - starts the webpack dev server
+- Linting:
+  - `npm run eslint`
+    - `npm run eslint -- --fix`
+  - `npm run stylelint`
+    - `npm run stylelint -- --fix`
+- Database:
+  - `npm run migrate`
+  - `npm run reset-db`
+- Testing
+  - `npm t`
+  - `npm run test:jsdom`
+  - `npm run test:server`
+- Webpack
+  - `npm run build`
+
 ## Deploying
 
 You'll need the following features and environment variables:

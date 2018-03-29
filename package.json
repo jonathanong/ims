@@ -12,7 +12,7 @@
     "test": "npm run reset-db && npm run test:server && npm run test:jsdom",
     "test:jsdom": "jest --config jest.jsdom.json",
     "test:server": "jest --config jest.server.json",
-    "watch": "WEBPACK_DEV_SERVER=1 npx webpack-dev-server --config webpack.development.js --hot --port 3691",
+    "dev-server": "WEBPACK_DEV_SERVER=1 npx webpack-dev-server --config webpack.development.js --hot --port 3691",
     "build": "npx webpack --config webpack.production.js"
   },
   "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",

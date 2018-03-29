@@ -11,6 +11,7 @@ process.env.NODE_ENV = 'production'
 
 module.exports = {
   mode: 'production',
+  bail: true,
   entry: {
     index: path.resolve(__dirname, 'client/index.js')
   },
@@ -51,6 +52,9 @@ module.exports = {
     new CaseSensitivePathsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    new webpack.optimize.MinChunkSizePlugin({
+      minChunkSize: 1024 * 10
     }),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
