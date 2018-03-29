@@ -32,7 +32,6 @@ save_cache: &save_cache
   save_cache:
     key: code-{{ .Branch }}-{{ checksum ".nvmrc" }}-{{ checksum "package.json"}}
     paths:
-      - .cache
       - node_modules
 
 test-coverage: &test-coverage
