@@ -27,14 +27,14 @@ app.use(require('koa-json')({
   pretty: env !== 'production'
 }))
 
-// serve the static files
+// public assets
 app.use(serve(path.resolve('public'), {
   maxage: 86400 * 1000,
   hidden: true,
   index: false
 }))
 
-// serve the built files on /_assets/
+// wepback-built files
 app.use(mount('/assets', compose([
   serve(path.resolve('dist'), {
     maxage: 86400 * 1000,
