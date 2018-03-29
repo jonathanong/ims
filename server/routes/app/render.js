@@ -12,11 +12,12 @@ let manifest
 const getManifest = () => {
   // no manifest for dev builds
   if (devServer) {
-    // TODO: use a proxy
-    return {
-      'index.css': 'index.css',
-      'index.js': 'index.js'
-    }
+    return new Proxy({}, {
+      get (obj, prop) {
+        if (typeof prop === 'string') return `/assets/${prop}`
+        return obj[prop]
+      }
+    })
   }
   // get the manifest with no caching
   if (env === 'development') return JSON.parse(fs.readFileSync(require.resolve(MANIFEST_PATH), 'utf8'))
