@@ -73,7 +73,7 @@ module.exports = {
         // https://github.com/webpack-contrib/mini-css-extract-plugin#features
         // We don't have enough CSS to care about code splitting CSS
         styles: {
-          name: 'styles',
+          name: 'index',
           test: /\.css$/,
           chunks: 'all',
           enforce: true
