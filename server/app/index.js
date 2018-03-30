@@ -41,5 +41,17 @@ app.use(mount('/assets', compose([
     hidden: false,
     index: false
   }),
-  (ctx) => ctx.throw(404)
+  pageNotFound
 ])))
+
+// storybook - I wouldn't serve this in production
+app.use(mount('/storybook', compose([
+  serve(path.resolve('storybook-static'), {
+    maxage: 86400 * 1000
+  }),
+  pageNotFound
+])))
+
+function pageNotFound (ctx) {
+  ctx.throw(404)
+}
