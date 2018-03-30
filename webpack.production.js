@@ -14,10 +14,10 @@ module.exports = {
   bail: true,
   devtool: 'source-map',
   entry: {
-    index: path.resolve(__dirname, 'client/index.js')
+    index: path.resolve('client/index.js')
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('dist'),
     filename: '[name].[hash].js',
     chunkFilename: '[name].[hash].js',
     publicPath: '/assets/'

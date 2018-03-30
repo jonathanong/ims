@@ -10,10 +10,10 @@ const devServer = !!process.env.WEBPACK_DEV_SERVER
 module.exports = {
   mode: 'development',
   entry: {
-    index: path.resolve(__dirname, 'client/index.js')
+    index: path.resolve('client/index.js')
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('dist'),
     filename: '[name].js',
     chunkFilename: '[name].js',
     publicPath: devServer ? 'http://localhost:3691/assets/' : '/assets/'
