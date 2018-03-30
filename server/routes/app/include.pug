@@ -55,6 +55,9 @@ mixin detect-ie
         if (version && version <= 11) document.documentElement.classList.add('ie')
       })();
 
+mixin polyfills
+  script(src='/assets/babel-polyfill/polyfill.min.js')
+
 mixin head
   if !devServer
     link(rel='stylesheet' href=manifest['index.css'])
@@ -62,6 +65,7 @@ mixin head
     document.documentElement.classList.add('js')
   +rollbar
   +detect-ie
+  +polyfills
 
 mixin butt
   if devServer

@@ -51,6 +51,10 @@ app.use(serve(path.resolve('public'), {
   index: false
 }))
 
+app.use(mount('/assets/babel-polyfill', serve(path.resolve('node_modules/babel-polyfill/dist'), {
+  maxage: 86400 * 1000
+})))
+
 // wepback-built files
 app.use(mount('/assets', compose([
   serve(path.resolve('dist'), {
