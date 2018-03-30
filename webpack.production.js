@@ -12,6 +12,7 @@ process.env.NODE_ENV = 'production'
 module.exports = {
   mode: 'production',
   bail: true,
+  devtool: 'source-map',
   entry: {
     index: path.resolve(__dirname, 'client/index.js')
   },
@@ -63,7 +64,7 @@ module.exports = {
       chunkFilename: '[name].[hash].css'
     }),
     new ManifestPlugin({
-      fileName: 'asset-manifest.json'
+      fileName: 'manifest.json'
     }),
     new Visualizer({
       filename: 'index.html'

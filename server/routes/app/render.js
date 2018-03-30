@@ -4,7 +4,7 @@ const pug = require('pug')
 const fs = require('fs')
 
 const TEMPLATE_FILENAME = path.resolve(__dirname, 'index.pug')
-const MANIFEST_PATH = '../../../dist/asset-manifest.json'
+const MANIFEST_PATH = '../../../dist/manifest.json'
 const env = process.env.NODE_ENV || 'development'
 const devServer = !!process.env.WEBPACK_DEV_SERVER
 
