@@ -9,6 +9,7 @@ const onError = require('../lib/on-error')
 
 const app = module.exports = new Koa()
 const env = process.env.NODE_ENV || 'development'
+const maxage = 86400 * 1000
 
 require('koa-body-parsers')(app)
 
@@ -46,21 +47,21 @@ app.use(require('koa-json')({
 
 // public assets
 app.use(serve(path.resolve('public'), {
-  maxage: 86400 * 1000,
-  hidden: true,
-  index: false
+  maxage
 }))
 
 app.use(mount('/assets/babel-polyfill', serve(path.resolve('node_modules/babel-polyfill/dist'), {
-  maxage: 86400 * 1000
+  maxage
+})))
+
+app.use(mount('/assets/rollbar', serve(path.resolve('node_modules/rollbar/dist'), {
+  maxage
 })))
 
 // wepback-built files
 app.use(mount('/assets', compose([
   serve(path.resolve('dist'), {
-    maxage: 86400 * 1000,
-    hidden: false,
-    index: false
+    maxage
   }),
   pageNotFound
 ])))
@@ -68,7 +69,7 @@ app.use(mount('/assets', compose([
 // storybook - I wouldn't serve this in production
 app.use(mount('/storybook', compose([
   serve(path.resolve('storybook-static'), {
-    maxage: 86400 * 1000
+    maxage
   }),
   pageNotFound
 ])))

@@ -20,6 +20,7 @@
   "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "concurrency-logger": "^2.1.0",
     "fs-cp": "^1.4.0",
     "jstransformer-uglify-js": "^1.2.0",
@@ -58,7 +59,6 @@
     "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-react-app": "^3.1.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",

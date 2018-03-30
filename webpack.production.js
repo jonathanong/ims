@@ -65,7 +65,9 @@ module.exports = {
     new ManifestPlugin({
       fileName: 'asset-manifest.json'
     }),
-    new Visualizer()
+    new Visualizer({
+      filename: 'index.html'
+    })
   ],
   optimization: {
     splitChunks: {
