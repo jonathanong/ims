@@ -17,6 +17,9 @@ IMS is an image management system designed for managing your static assets. It's
 - Starting the server in development mode:
   - `npm start` - starts the nodejs app
   - `npm run dev-server` - starts the webpack dev server
+- Storybook:
+  - `npm run storybook` - run the storybook server
+  - `npm run build-storybook` - build a static version of the storybook
 - Linting:
   - `npm run eslint`
     - `npm run eslint -- --fix`
@@ -26,9 +29,9 @@ IMS is an image management system designed for managing your static assets. It's
   - `npm run migrate`
   - `npm run reset-db`
 - Testing
-  - `npm t`
-  - `npm run test:jsdom`
-  - `npm run test:server`
+  - `npm t` - run all tests
+  - `npm run test:jsdom` - run the jsdom tests
+  - `npm run test:server` - run the server tests
 - Webpack
   - `npm run build`
 

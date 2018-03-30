@@ -13,6 +13,9 @@
   - `api/` - API routes
   - `routes/` - non-API routes
 - `client/` - all client-side app code
+  - `ui/`
+  - `components/`
+  - `stories/`
 - `tests/` - tests that span both the server and the client
   - `monitors/` - API and Puppeteer smoke tests
   - `automation/` - Selenium tests
