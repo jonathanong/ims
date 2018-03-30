@@ -8,4 +8,4 @@ routes.push(route('/ping').get(ctx => {
   ctx.body = 'pong'
 }))
 
-routes.push(...require('./app'))
+routes.push(...require('./client-app'))

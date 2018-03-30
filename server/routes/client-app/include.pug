@@ -1,4 +1,4 @@
-mixin metaTop
+mixin meta-top
   meta(charset='utf-8')
   meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
   meta(name='theme-color' content='#000000')
@@ -6,11 +6,11 @@ mixin metaTop
 mixin favicons
   //- TODO: add icons!
 
-mixin metaBottom
+mixin meta-bottom
   meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1')
   meta(name='theme-color' content='#000000')
 
-mixin metaSEO
+mixin meta-seo
   //- NOTE: I don't remember what this was for
   meta(name='fragment' content='!')
 
@@ -54,9 +54,6 @@ mixin detect-ie
         if (version && version <= 11) document.documentElement.classList.add('ie')
       })();
 
-mixin polyfills
-  script(src='/assets/babel-polyfill/polyfill.min.js')
-
 mixin head
   if !devServer
     link(rel='stylesheet' href=manifest['index.css'])
@@ -64,7 +61,6 @@ mixin head
     document.documentElement.classList.add('js')
   +rollbar
   +detect-ie
-  +polyfills
 
 mixin butt
   if devServer
