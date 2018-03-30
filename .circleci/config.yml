@@ -39,7 +39,7 @@ test-coverage: &test-coverage
 
 version: 2
 jobs:
-  build:
+  test:
     <<: *server-defaults
     steps:
       - checkout
@@ -54,3 +54,26 @@ jobs:
       - run: npm run test:jsdom -- --maxWorkers 2
       - *test-coverage
       - *save_cache
+  storybook:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npx storybook-to-ghpages
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - test:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+      - storybook:
+          requires:
+            - test
+          filters:
+            branches:
+              only:
+                - master

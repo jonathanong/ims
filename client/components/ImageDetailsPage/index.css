@@ -1,0 +1,86 @@
+
+.container {
+  flex: 1 0 auto;
+}
+
+.main {
+  background-color: #e2e2e2;
+}
+
+.asides {
+
+}
+
+@media (min-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main {
+    flex: 0 1 calc(100% - 20rem);
+    border-right: 1px solid #ddd;
+  }
+
+  .asides {
+    flex: 0 0 20rem;
+  }
+}
+
+.imageWrapper {
+  display: inline-block;
+  margin: 1rem;
+  border: 1px solid #ccc;
+  line-height: 0;
+  font-size: 0;
+}
+
+.imageWrapperLight {
+  composes: imageWrapper;
+  background-color: #fff;
+}
+
+.imageWrapperDark {
+  composes: imageWrapper;
+  background-color: #000;
+}
+
+.asides > aside {
+  padding: 1rem;
+}
+
+.asides h6 {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.asideDetails {
+
+}
+
+.asideDetailsTableWrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.asideDetails > table {
+  max-width: 100%;
+}
+
+.asideDetails td {
+  padding: 0 0.25rem;
+}
+
+.asideDetails td:first-child {
+  font-weight: 600;
+  text-align: right;
+}
+
+.asideDetails td:first-child::after {
+  content: ':';
+}
+
+.asideTags > ul {
+  margin-bottom: 0;
+}

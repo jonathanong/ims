@@ -1,0 +1,2396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ImageDetailsPage w/ Anna Kendrick Photo 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <main
+      className={undefined}
+    >
+      <a
+        className={undefined}
+        href="https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg"
+        target="_blank"
+      >
+        <img
+          alt="Anna Kendrick"
+          src="https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg"
+        />
+      </a>
+    </main>
+    <div
+      className={undefined}
+    >
+      <aside
+        className={undefined}
+      >
+        <h6>
+          Metadata
+        </h6>
+        <div
+          className={undefined}
+        >
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  Width
+                </td>
+                <td>
+                  1240
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Height
+                </td>
+                <td>
+                  775
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Format
+                </td>
+                <td>
+                  JPEG
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Color Space
+                </td>
+                <td>
+                  SRGB
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Has Alpha Channel
+                </td>
+                <td>
+                  No
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Is Transparent
+                </td>
+                <td>
+                  No
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+      <aside
+        className={undefined}
+      >
+        <h6>
+          Tags
+        </h6>
+        <ul>
+          <li>
+            anna kendrick
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ImageDetailsPage w/ Google Logo 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <main
+      className={undefined}
+    >
+      <a
+        className={undefined}
+        href="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        target="_blank"
+      >
+        <img
+          alt="z5vn9gr3wja"
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        />
+      </a>
+      <a
+        className={undefined}
+        href="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        target="_blank"
+      >
+        <img
+          alt="z5vn9gr3wja"
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+        />
+      </a>
+    </main>
+    <div
+      className={undefined}
+    >
+      <aside
+        className={undefined}
+      >
+        <h6>
+          Metadata
+        </h6>
+        <div
+          className={undefined}
+        >
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  Width
+                </td>
+                <td>
+                  544
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Height
+                </td>
+                <td>
+                  184
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Format
+                </td>
+                <td>
+                  PNG
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Color Space
+                </td>
+                <td>
+                  SRGB
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Has Alpha Channel
+                </td>
+                <td>
+                  Yes
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Is Transparent
+                </td>
+                <td>
+                  Yes
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+      <aside
+        className={undefined}
+      >
+        <h6>
+          Tags
+        </h6>
+        <ul>
+          <li>
+            google
+          </li>
+          <li>
+            logo
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ImageGrid w/ 0 images 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  />
+</div>
+`;
+
+exports[`Storyshots ImageGrid w/ 2 images 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ImageGrid w/ 4 images 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ImageGrid w/ 8 images 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ImageGrid w/ 16 images 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ImageGrid w/ 32 images 1`] = `
+<div
+  className={undefined}
+>
+  <div
+    className={undefined}
+  >
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          z5vn9gr3wja
+        </h6>
+      </div>
+    </a>
+    <a
+      className={undefined}
+      href="#"
+    >
+      <div
+        className={undefined}
+      >
+        <div
+          className={undefined}
+          style={
+            Object {
+              "backgroundImage": "url(https://static.parade.com/wp-content/uploads/2017/10/AnnaKendrick-FTR.jpg)",
+            }
+          }
+        />
+      </div>
+      <div
+        className={undefined}
+      >
+        <h6>
+          Anna Kendrick
+        </h6>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ImageSearchPanel default filters 1`] = `
+<form
+  className={undefined}
+>
+  <fieldset>
+    <legend>
+      Image Formats
+    </legend>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="all"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        All
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="png"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        PNG
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="jpeg"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        JPEG
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="webp"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        WEBP
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="svg"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        SVG
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="gif"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        GIF
+      </span>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>
+      Tags
+    </legend>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-5"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        ad
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-8"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        asdf
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-2"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        banner
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-4"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        landscape
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-1"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        logo
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-3"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        portrait
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-7"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        some other tag
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        checked={false}
+        name="tag-6"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span>
+        something
+      </span>
+    </label>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots TopNav guest 1`] = `
+<div
+  className={undefined}
+>
+  <a
+    className={undefined}
+    href="/"
+    onClick={[Function]}
+  >
+    IMS
+  </a>
+</div>
+`;
+
+exports[`Storyshots UI Forms 1`] = `
+<form
+  style={
+    Object {
+      "padding": "1rem",
+    }
+  }
+>
+  <fieldset>
+    <legend>
+      This is a sample fieldset
+    </legend>
+    <div
+      className="control-group"
+    >
+      <label
+        htmlFor="search"
+      >
+        Please search in this text box
+      </label>
+      <input
+        id="search"
+        name="search"
+        placeholder="Search here"
+        required={true}
+        type="search"
+      />
+    </div>
+    <div
+      className="control-group"
+    >
+      <label
+        htmlFor="email"
+      >
+        Please type your email in this text box
+      </label>
+      <input
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        required={true}
+        type="email"
+      />
+    </div>
+    <div
+      className="control-group"
+    >
+      <label
+        htmlFor="password"
+      >
+        Please type your password in this text box
+      </label>
+      <input
+        id="password"
+        name="password"
+        placeholder="Password"
+        required={true}
+        type="password"
+      />
+    </div>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        defaultChecked={true}
+        type="checkbox"
+      />
+      <span>
+        Check me please.
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        type="checkbox"
+      />
+      <span>
+        Check me please.
+      </span>
+    </label>
+    <label
+      className="checkbox-group"
+    >
+      <input
+        type="checkbox"
+      />
+      <span>
+        Check me please.
+      </span>
+    </label>
+  </fieldset>
+</form>
+`;
+
+exports[`Storyshots UI Typography 1`] = `
+<div
+  style={
+    Object {
+      "padding": "1rem",
+    }
+  }
+>
+  <h1>
+    Header h1
+  </h1>
+  <h2>
+    Header h2
+  </h2>
+  <h3>
+    Header h3
+  </h3>
+  <h4>
+    Header h4
+  </h4>
+  <h5>
+    Header h5
+  </h5>
+  <h6>
+    Header h6
+  </h6>
+  <hr />
+  <p>
+    Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. 
+  </p>
+  <hr />
+  <p>
+    Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. Some paragraph. 
+  </p>
+  <ul>
+    <li>
+      An item in an unordered list.
+    </li>
+    <li>
+      An item in an unordered list.
+    </li>
+    <li>
+      An item in an unordered list.
+    </li>
+    <li>
+      An item in an unordered list.
+    </li>
+  </ul>
+  <ol>
+    <li>
+      An item in an ordered list.
+    </li>
+    <li>
+      An item in an ordered list.
+    </li>
+    <li>
+      An item in an ordered list.
+    </li>
+    <li>
+      An item in an ordered list.
+    </li>
+  </ol>
+</div>
+`;
