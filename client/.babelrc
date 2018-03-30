@@ -3,7 +3,7 @@
     "react",
     ["env", {
       "targets": {
-        "browsers": "last 1 year",
+        "browsers": "last 3 years",
         "node": "current"
       },
       "useBuiltIns": true,
