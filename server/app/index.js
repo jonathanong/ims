@@ -50,6 +50,10 @@ app.use(serve(path.resolve('public'), {
   maxage
 }))
 
+app.use(mount('/assets/babel-polyfill', serve(path.resolve('node_modules/babel-polyfill/dist'), {
+  maxage
+})))
+
 app.use(mount('/assets/rollbar', serve(path.resolve('node_modules/rollbar/dist'), {
   maxage
 })))

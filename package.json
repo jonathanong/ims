@@ -20,6 +20,7 @@
   "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "concurrency-logger": "^2.1.0",
     "fs-cp": "^1.4.0",
     "jstransformer-uglify-js": "^1.2.0",
