@@ -18,7 +18,6 @@ RUN \
   apk add vips-dev fftw-dev --update-cache --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
 
 RUN \
-   && \
   npm install && \
   npm run build && \
   npm run build-storybook && \
