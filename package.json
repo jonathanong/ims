@@ -6,7 +6,7 @@
   "scripts": {
     "start": "WEBPACK_DEV_SERVER=1 node server",
     "eslint": "eslint . .storybook --cache --cache-location node_modules/.cache/eslint --ignore-path .gitignore",
-    "stylelint": "stylelint 'client/**/*.css' 'stories/**/*.css' --cache --cache-location node_modules/.cache/stylelint --ignore-path .gitignore",
+    "stylelint": "stylelint '**/*.css' --cache --cache-location node_modules/.cache/stylelint --ignore-path .gitignore",
     "migrate": "node server/psql/migrate",
     "reset-db": "node server/psql/reset-db",
     "test": "npm run reset-db && npm run test:server && npm run test:jsdom",
