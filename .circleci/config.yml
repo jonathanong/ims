@@ -60,7 +60,8 @@ jobs:
       - checkout
       - *restore_cache
       - run: yarn run build-storybook
-      - run: npx storybook-to-ghpages
+      - run: cp -r .circleci storybook-static/
+      - run: npx storybook-to-ghpages --existing-output-dir=storybook-static
 
 workflows:
   version: 2
