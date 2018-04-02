@@ -15,8 +15,8 @@
     "storybook": "start-storybook -p 3692",
     "build-storybook": "build-storybook",
     "dev-server": "WEBPACK_DEV_SERVER=1 npx webpack-dev-server --config webpack.development.js --hot --port 3691",
-    "build": "npx webpack --config webpack.production.js",
-    "build-watch": "WEBPACK_WATCH=1 npx webpack --config webpack.production.js --watch"
+    "build": "npx webpack --config webpack.production.js --hide-modules",
+    "build-watch": "WEBPACK_WATCH=1 npx webpack --config webpack.production.js --hide-modules --watch"
   },
   "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
