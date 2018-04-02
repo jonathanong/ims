@@ -48,6 +48,7 @@ jobs:
       - run: npm run eslint
       - run: npm run stylelint
       - run: npm run build
+      - run: npm run build-storybook
       - run: npm run reset-db
       - run: npm run test:server -- --maxWorkers 4
       - *test-coverage
