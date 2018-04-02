@@ -73,7 +73,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: docker build . -t jonathanong/ims:$CIRCLE_BRANCH --build-arg GIT_COMMIT_SHA=$CIRCLE_BRANCH
+      - run: docker build . -t jonathanong/ims:$CIRCLE_SHA1 --build-arg GIT_COMMIT_SHA=$CIRCLE_SHA1
 
 workflows:
   version: 2
