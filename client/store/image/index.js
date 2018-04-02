@@ -1,5 +1,5 @@
 
-import { getImageById } from '../../../api-sdk/images'
+import { getImageById } from '../../api-sdk/images'
 
 export const INITIALIZE = Symbol('INITIALIZE')
 export const UPDATE = Symbol('UPDATE')
