@@ -8,6 +8,7 @@ const webpack = require('webpack')
 const path = require('path')
 
 process.env.NODE_ENV = 'production'
+const WEBPACK_WATCH = !!process.env.WEBPACK_WATCH
 
 module.exports = {
   mode: 'production',
@@ -42,7 +43,8 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: true,
-              minimize: true
+              minimize: !WEBPACK_WATCH,
+              sourceMap: true
             }
           }
         ]
@@ -84,7 +86,7 @@ module.exports = {
       }
     },
     minimizer: [
-      new UglifyJsPlugin({
+      !WEBPACK_WATCH && new UglifyJsPlugin({
         sourceMap: true,
         parallel: true,
         cache: true,
@@ -95,6 +97,6 @@ module.exports = {
           }
         }
       })
-    ]
+    ].filter(Boolean)
   }
 }
