@@ -30,14 +30,15 @@ IMS is an image management system designed for managing your static assets. It's
   - `npm run stylelint`
     - `npm run stylelint -- --fix`
 - Database:
-  - `npm run migrate`
-  - `npm run reset-db`
+  - `npm run migrate` - run migrations
+  - `npm run reset-db` - resets the database
 - Testing
   - `npm t` - run all tests
   - `npm run test:jsdom` - run the jsdom tests
   - `npm run test:server` - run the server tests
 - Webpack
-  - `npm run build`
+  - `npm run build` - build production builds
+  - `npm run build-watch` - auto-build production builds without minification for debugging
 
 ## Deploying
 
