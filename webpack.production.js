@@ -73,18 +73,6 @@ module.exports = {
     })
   ],
   optimization: {
-    splitChunks: {
-      cacheGroups: {
-        // https://github.com/webpack-contrib/mini-css-extract-plugin#features
-        // We don't have enough CSS to care about code splitting CSS
-        styles: {
-          name: 'index',
-          test: /\.css$/,
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    },
     minimizer: [
       !WEBPACK_WATCH && new UglifyJsPlugin({
         sourceMap: true,
