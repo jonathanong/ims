@@ -1,0 +1,6 @@
+.circleci
+coverage
+dist
+node_modules
+jest.*.json
+*.md
