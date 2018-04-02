@@ -22,4 +22,6 @@ routes.push(async (ctx, next) => {
   }
 })
 
+routes.push(...require('./images'))
+
 routes.push(ctx => ctx.throw(404))

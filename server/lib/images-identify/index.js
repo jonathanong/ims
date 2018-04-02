@@ -1,6 +1,9 @@
 
+const assert = require('http-assert')
 const error = require('http-errors')
 const sharp = require('sharp')
+
+const { supported_image_formats } = require('../../../isomorphic/constants.json')
 
 module.exports = async filename => {
   const metadata = await sharp(filename).metadata().catch((err) => {
@@ -10,6 +13,8 @@ module.exports = async filename => {
   const stats = await sharp(filename).stats().catch((err) => {
     throw error(415, `Could not read the image file stats: ${err.message}`)
   })
+
+  assert(supported_image_formats.includes(metadata.format), 415, `Unsupported image format.`)
 
   return {
     format: metadata.format,

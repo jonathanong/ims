@@ -2,7 +2,7 @@
 const request = require('request')
 const assert = require('assert')
 
-const identify = require('../../../lib/identify')
+const identify = require('../../../lib/images-identify')
 const {
   createImage,
   getImageById
