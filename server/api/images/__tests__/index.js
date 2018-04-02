@@ -2,7 +2,7 @@
 const request = require('supertest')
 const assert = require('assert')
 
-const { randomString } = require('../../../utils')
+const { randomString } = require('../../../../isomorphic/utils')
 const app = require('../../..')
 
 // http://png-pixel.com/

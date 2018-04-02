@@ -2,15 +2,13 @@
 const request = require('request')
 const assert = require('assert')
 
+const { randomString } = require('../../../../isomorphic/utils')
 const identify = require('../../../lib/images-identify')
+const { download } = require('../../../utils')
 const {
   createImage,
   getImageById
 } = require('../../images/crud')
-const {
-  download,
-  randomString
-} = require('../../../utils')
 const {
   getTagsWithCounts,
   upsertImageTags,
