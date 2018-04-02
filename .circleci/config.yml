@@ -34,6 +34,12 @@ save_cache: &save_cache
     paths:
       - node_modules
 
+ignore-gh-pages: &ignore-gh-pages
+  filters:
+    branches:
+      ignore:
+        - gh-pages
+
 test-coverage: &test-coverage
   run: npx codecov && rm -rf codecov
 
@@ -63,16 +69,18 @@ jobs:
       - run: npm run build-storybook
       - run: cp -r .circleci storybook-static/
       - run: npx storybook-to-ghpages --existing-output-dir=storybook-static
+  dockerize:
+    machine: true
+    steps:
+      - checkout
+      - run: docker build . -t jonathanong/ims:$CIRCLE_BRANCH --build-arg GIT_COMMIT_SHA=$CIRCLE_BRANCH .
 
 workflows:
   version: 2
   commit:
     jobs:
-      - test:
-          filters:
-            branches:
-              ignore:
-                - gh-pages
+      - test: *ignore-gh-pages
+      - dockerize: *ignore-gh-pages
       - storybook:
           requires:
             - test
