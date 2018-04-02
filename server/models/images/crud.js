@@ -71,6 +71,7 @@ exports.getImageById = async (id) => {
     SELECT *
     FROM view_images
     WHERE id = $1
+      AND deleted = FALSE
   `, [id])
 
   return rows[0] || null

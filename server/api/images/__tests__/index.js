@@ -2,6 +2,7 @@
 const request = require('supertest')
 const assert = require('assert')
 
+const { randomString } = require('../../../utils')
 const app = require('../../..')
 
 // http://png-pixel.com/
@@ -41,4 +42,32 @@ test('GET /api/images/:id', async () => {
     .expect(200)
 
   assert.equal(body.id, image.id)
+})
+
+test('PATCH /api/images/:id', async () => {
+  const changes = {
+    title: 'some new title',
+    description: 'some new description',
+    pathname: 'some-new-pathname-' + randomString()
+  }
+  const { body } = await request(server)
+    .patch(`/api/images/${image.id}`)
+    .send(changes)
+    .expect(200)
+
+  assert.equal(body.title, changes.title)
+  assert.equal(body.description, changes.description)
+  assert.equal(body.pathname, changes.pathname)
+})
+
+test('DELETE /api/images/:id', async () => {
+  await request(server)
+    .delete(`/api/images/${image.id}`)
+    .expect(204)
+})
+
+test('GET /api/images/:id', async () => {
+  await request(server)
+    .get(`/api/images/${image.id}`)
+    .expect(404)
 })
