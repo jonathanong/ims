@@ -1,22 +1,15 @@
 package-lock.json
 package-lock.json.*
+yarn.lock
+
 build/
 coverage/
-coverage_*/
 dist/
-iteration-dist/
 node_modules/
-bower_components/
-tmp/
+storybook-static/
 
 *.log
 *.log.*
 
 .DS_Store
-.sass-cache
-.eslintcache
-.vagrant
-.nyc_output
-.cache
-lcov.dat
-storybook-static
+*.gz

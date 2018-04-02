@@ -44,14 +44,14 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: npm install
-      - run: npm run eslint
-      - run: npm run stylelint
-      - run: npm run build
-      - run: npm run reset-db
-      - run: npm run test:server -- --maxWorkers 4
+      - run: yarn
+      - run: yarn run eslint
+      - run: yarn run stylelint
+      - run: yarn run build
+      - run: yarn run reset-db
+      - run: yarn run test:server -- --maxWorkers 4
       - *test-coverage
-      - run: npm run test:jsdom -- --maxWorkers 2
+      - run: yarn run test:jsdom -- --maxWorkers 2
       - *test-coverage
       - *save_cache
   storybook:
@@ -59,7 +59,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: npm run build-storybook
+      - run: yarn run build-storybook
       - run: npx storybook-to-ghpages
 
 workflows:
