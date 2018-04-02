@@ -14,11 +14,13 @@ ARG GIT_COMMIT_SHA
 ENV GIT_COMMIT_SHA ${GIT_COMMIT_SHA}
 
 RUN \
+  apk add --no-cache make gcc g++ python && \
   npm install && \
   npm run build && \
   npm run build-storybook && \
   rm -rf node_modules && \
-  npm install --production
+  npm install --production && \
+  apk del make gcc g++ python
 
 EXPOSE 3000
 
