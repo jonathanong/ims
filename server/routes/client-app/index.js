@@ -10,3 +10,4 @@ const serve = () => async (ctx) => {
 }
 
 routes.push(route('/').get(serve()))
+routes.push(route('/images/:id').get(serve()))

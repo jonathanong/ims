@@ -1,8 +1,6 @@
 
 import { getImageById } from '../../api-sdk/images'
-
-export const INITIALIZE = Symbol('INITIALIZE')
-export const UPDATE = Symbol('UPDATE')
+import { INITIALIZE, UPDATE } from './actions'
 
 export const getImage = (dispatch) => async (id) => {
   const queryId = Symbol(id)
@@ -23,6 +21,7 @@ export const getImage = (dispatch) => async (id) => {
         result
       }
     })
+    console.log('done')
     return result
   } catch (error) {
     dispatch({

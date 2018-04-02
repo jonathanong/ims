@@ -59,6 +59,8 @@ mixin head
     link(rel='stylesheet' href=manifest['index.css'])
   script.
     document.documentElement.classList.add('js')
+  script.
+    IMS={}
   +rollbar
   +detect-ie
 
