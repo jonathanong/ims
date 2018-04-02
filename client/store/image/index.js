@@ -21,7 +21,6 @@ export const getImage = (dispatch) => async (id) => {
         result
       }
     })
-    console.log('done')
     return result
   } catch (error) {
     dispatch({
