@@ -1,9 +1,8 @@
 # IMS – Image Management System
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jonathanong/ims.svg?token=8a849d24c0cf36b8b1eeda246dcbb5ae15d67ac4df1ac26f6cac1f699ae096c6&ts=1522645479435)](https://greenkeeper.io/)
-
 [![CircleCI](https://circleci.com/gh/jonathanong/ims/tree/master.svg?style=svg&circle-token=e671a5694822728e67dc35852856d4705d6195c6)](https://circleci.com/gh/jonathanong/ims/tree/master)
 [![codecov](https://codecov.io/gh/jonathanong/ims/branch/master/graph/badge.svg?token=vUSQgvaoCK)](https://codecov.io/gh/jonathanong/ims)
+[![Greenkeeper badge](https://badges.greenkeeper.io/jonathanong/ims.svg?token=8a849d24c0cf36b8b1eeda246dcbb5ae15d67ac4df1ac26f6cac1f699ae096c6&ts=1522645479435)](https://greenkeeper.io/)
 
 ![https://codecov.io/gh/jonathanong/ims/branch/master](https://codecov.io/gh/jonathanong/ims/branch/master/graphs/sunburst.svg?token=vUSQgvaoCK)
 
