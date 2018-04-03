@@ -17,7 +17,8 @@
     "dev-server": "WEBPACK_DEV_SERVER=1 npx webpack-dev-server --config webpack.development.js --hot --port 3691",
     "build": "npx webpack --config webpack.production.js --hide-modules",
     "build-watch": "WEBPACK_WATCH=1 npx webpack --config webpack.production.js --hide-modules --watch",
-    "monitors": "dsc-monitor 'tests/monitors/**/*.js'"
+    "monitors": "dsc-monitor 'tests/monitors/**/*.js'",
+    "automation": "dsc-e2e 'tests/automation/**/*.js'"
   },
   "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
