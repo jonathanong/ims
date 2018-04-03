@@ -1,2 +1,2 @@
 
-exports.domain = process.env.IMS_DOMAIN || 'localhost:3690'
+exports.domain = process.env.IMS_DOMAIN || 'http://localhost:3690'
