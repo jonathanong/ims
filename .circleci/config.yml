@@ -7,6 +7,21 @@ defaults: &defaults
         NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
         JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
 
+browser-defaults: &browser-defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:8-browsers
+      environment:
+        NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
+        JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+        DATABASE_URL: postgres://root:@localhost/ims
+        DATABASE_NAME: ims
+    - image: mdillon/postgis:10-alpine
+      environment:
+        POSTGRES_USER: root
+        POSTGRES_DB: ims
+        POSTGRES_PASSWORD: ""
+
 server-defaults: &server-defaults
   working_directory: ~/code
   docker:
@@ -61,6 +76,23 @@ jobs:
       - run: npm run test:jsdom -- --maxWorkers 2
       - *test-coverage
       - *save_cache
+
+  test-browsers:
+    <<: *browser-defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm install # just in case
+      - run: npm run build
+      - run: npm run reset-db
+      - run:
+          name: server
+          command: node server
+          background: true
+      - run: sleep 3
+      - run: npm run monitors
+      - run: npm run automation
+
   publish-storybook:
     <<: *defaults
     steps:
@@ -69,6 +101,7 @@ jobs:
       - run: npm run build-storybook
       - run: cp -r .circleci storybook-static/
       - run: npx storybook-to-ghpages --existing-output-dir=storybook-static
+
   build-docker-image:
     machine: true
     steps:
@@ -80,6 +113,10 @@ workflows:
   commit:
     jobs:
       - test: *ignore-gh-pages
+      - test-browsers:
+          <<: *ignore-gh-pages
+          requires:
+            - test
       - build-docker-image: *ignore-gh-pages
       - publish-storybook:
           requires:
