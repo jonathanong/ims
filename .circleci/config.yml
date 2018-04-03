@@ -61,6 +61,13 @@ jobs:
       - run: npm run test:jsdom -- --maxWorkers 2
       - *test-coverage
       - *save_cache
+      - run:
+          name: server
+          command: node server
+          background: true
+      - run: sleep 3
+      - run: npm run monitors
+
   publish-storybook:
     <<: *defaults
     steps:
