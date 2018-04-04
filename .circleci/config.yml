@@ -90,7 +90,7 @@ jobs:
       - run: npm run reset-db
       - run:
           name: server
-          command: node server
+          command: node bin/serve.js
           background: true
       - run: sleep 3
       - run: npm run monitors

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "An image management system for your static assets",
   "scripts": {
-    "start": "WEBPACK_DEV_SERVER=1 node server",
+    "start": "WEBPACK_DEV_SERVER=1 node bin/serve.js",
     "eslint": "eslint . .storybook --cache --cache-location node_modules/.cache/eslint --ignore-path .gitignore",
     "stylelint": "stylelint '**/*.css' --cache --cache-location node_modules/.cache/stylelint --ignore-path .gitignore",
     "migrate": "node server/psql/migrate",
