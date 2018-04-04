@@ -49,6 +49,18 @@ save_cache: &save_cache
     paths:
       - node_modules
 
+restore_workspace_cache: &restore_workspace_cachee
+  restore_cache:
+    keys:
+      - workspace-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
+
+save_workspace_cache: &save_workspace_cache
+  save_cache:
+    key: workspace-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
+    paths:
+      - dist
+      - storybook-build
+
 ignore-gh-pages: &ignore-gh-pages
   filters:
     branches:
@@ -80,13 +92,14 @@ jobs:
       - run: npm run test:jsdom -- --maxWorkers 2
       - *test-coverage
       - *save_cache
+      - *save_workspace_cache
 
   test-browsers:
     <<: *browser-defaults
     steps:
       - checkout
       - *restore_cache
-      - run: npm run build
+      - *restore_workspace_cache
       - run: npm run reset-db
       - run:
           name: server
@@ -117,7 +130,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: npm run build-storybook
+      - *restore_workspace_cache
       - run: cp -r .circleci storybook-static/
       - run: npx storybook-to-ghpages --existing-output-dir=storybook-static
 
