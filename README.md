@@ -7,10 +7,12 @@
 [![codecov](https://codecov.io/gh/jonathanong/ims/branch/master/graphs/sunburst.svg?token=vUSQgvaoCK)](https://codecov.io/gh/jonathanong/ims/branch/master)
 
 IMS is an image management system designed for managing your static assets. It's not designed to be a full-fledged CMS or DAM.
+This is also my reference app architecture. See [Architecture](ARCHITECTURE.md) for more information.
 
 ## Features
 
-- Tagging
+- Image uploading
+- Image serving
 - CDN Support
   - Imgix - for resizing, compressing, and manipulating your image
   - AWS CloudFront
@@ -36,6 +38,8 @@ IMS is an image management system designed for managing your static assets. It's
   - `npm t` - run all tests
   - `npm run test:jsdom` - run the jsdom tests
   - `npm run test:server` - run the server tests
+  - `npm run monitors` - run monitors
+  - `npm run automation` - run Selenium tests acceptance tests
 - Webpack
   - `npm run build` - build production builds
   - `npm run build-watch` - auto-build production builds without minification for debugging
@@ -51,12 +55,3 @@ You'll need the following features and environment variables:
 - Imgix - required to serve your images as IMS intentionally does not compress or resize images for you
   - `IMS_IMGIX_SUBDOMAIN`
   - `IMS_IMGIX_API_KEY`
-
-## Architecture
-
-This is also my personal reference app.
-Please see [Architecture](ARCHITECTURE.md) for more information.
-
-## License
-
-MIT
