@@ -146,8 +146,18 @@ workflows:
               only:
                 - master
       # TODO: flush this out
-      - monitor-production: *ignore-gh-pages
-      - monitor-staging: *ignore-gh-pages
+      - monitor-production:
+          filters:
+            branches:
+              ignore:
+                - master
+                - gh-pages
+      - monitor-staging:
+          filters:
+            branches:
+              ignore:
+                - master
+                - gh-pages
   monitor:
     triggers:
       - schedule:
