@@ -152,10 +152,12 @@ workflows:
   monitor:
     triggers:
       - schedule:
-          cron: "0 0 * * *"
+          # TODO: when actually in production, run in every minute
+          cron: "0 * * * *"
           filters:
             branches:
               only:
                 - master
     jobs:
       - monitor-production
+      - monitor-staging
