@@ -1,12 +1,19 @@
 #!/usr/bin/env node
 
+const stoppable = require('stoppable')
+const http = require('http')
+
 const onError = require('../server/lib/on-error')
 const app = require('../server')
 
+const gracefulShutdownPeriodSeconds = 10
 const port = process.env.PORT || 3690
 let closing = false
 
-const server = app.listen(port, function (err) {
+const server = http.createServer(app.callback())
+stoppable(server, gracefulShutdownPeriodSeconds * 1000)
+
+server.listen(port, function (err) {
   if (err) {
     console.error(err.stack)
     process.exitCode = 1
@@ -22,8 +29,11 @@ process.on('uncaughtException', (err) => {
   close()
 })
 
+process.on('SIGINT', close)
+process.on('SIGTERM', close)
+
 function close () {
   if (closing) return
   closing = true
-  server.close()
+  server.stop()
 }
