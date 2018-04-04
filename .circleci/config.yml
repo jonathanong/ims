@@ -40,7 +40,7 @@ server-defaults: &server-defaults
 restore_cache: &restore_cache
   restore_cache:
     keys:
-      - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-{{ .Revision }}
+      - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
       - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-
       - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-master-
       - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-
@@ -48,22 +48,11 @@ restore_cache: &restore_cache
 
 save_cache: &save_cache
   save_cache:
-    key: code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-{{ .Revision }}
+    key: code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
     paths:
       - node_modules
-
-restore_workspace_cache: &restore_workspace_cache
-  restore_cache:
-    keys:
-      - workspace-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
-
-save_workspace_cache: &save_workspace_cache
-  save_cache:
-    key: workspace-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
-    paths:
       - dist
       - storybook-build
-      - node_modules/.cache
 
 ignore-gh-pages: &ignore-gh-pages
   filters:
@@ -96,14 +85,12 @@ jobs:
       - run: npm run test:jsdom -- --maxWorkers 2
       - *test-coverage
       - *save_cache
-      - *save_workspace_cache
 
   test-browsers:
     <<: *browser-defaults
     steps:
       - checkout
       - *restore_cache
-      - *restore_workspace_cache
       - run: npm run reset-db
       - run:
           name: server
@@ -134,7 +121,6 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - *restore_workspace_cache
       - run: cp -r .circleci storybook-static/
       - run: npx storybook-to-ghpages --existing-output-dir=storybook-static
 
