@@ -3,5 +3,7 @@ extends:
   - standard
   - standard-react
 parser: babel-eslint
+plugins:
+  - flowtype
 rules:
   camelcase: 0

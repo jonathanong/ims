@@ -3,7 +3,7 @@ import { getImageById } from '../../api-sdk/images'
 import { INITIALIZE, UPDATE } from './actions'
 
 // TODO: create an abstraction for these API calls
-export const getImage = (dispatch) => async (id) => {
+export const getImage = (dispatch: Function): Function => async (id: string|number): Object => {
   const queryId = Symbol(id)
   dispatch({
     type: INITIALIZE,

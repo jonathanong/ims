@@ -4,7 +4,7 @@ import {
   UPDATE
 } from './actions'
 
-export default (state = {}, { type, payload }) => {
+export default (state: Object|void = {}, { type, payload }): Object => {
   switch (type) {
     case INITIALIZE:
       return { ...payload }
