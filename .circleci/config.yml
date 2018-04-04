@@ -155,7 +155,7 @@ workflows:
     triggers:
       - schedule:
           # TODO: when actually in production, run in every minute
-          cron: "0 * * * *"
+          cron: "0 0 * * *"
           filters:
             branches:
               only:
