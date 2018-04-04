@@ -75,6 +75,7 @@ jobs:
       - checkout
       - *restore_cache
       - run: npm install
+      - run: npm run json-check
       - run: npm run eslint
       - run: npm run stylelint
       - run: npm run build
