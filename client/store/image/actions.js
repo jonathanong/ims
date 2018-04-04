@@ -1,3 +1,3 @@
 
-export const INITIALIZE = Symbol('INITIALIZE')
-export const UPDATE = Symbol('UPDATE')
+export const INITIALIZE = Symbol('')
+export const UPDATE = Symbol('')
