@@ -7,7 +7,7 @@ const http = require('http')
 const onError = require('../server/lib/on-error')
 const app = require('../server')
 
-const gracefulShutdownPeriodSeconds = ~~process.env.GRACEFUL_SHUTDOWN_PERIOD_SECONDS || 10
+const gracefulShutdownPeriodSeconds = ~~process.env.GRACEFUL_SHUTDOWN_PERIOD_SECONDS || 5
 const port = process.env.PORT || 3690
 let closing = false
 
@@ -25,7 +25,7 @@ server.listen(port, function (err) {
   }
 
   debug('server listening')
-  console.log('IMS serving at http://localhost:%s', this.address().port)
+  console.log('Serving IMS at http://localhost:%s', this.address().port)
 })
 
 // we just log unhandled rejection errors because they don't ruin the process
