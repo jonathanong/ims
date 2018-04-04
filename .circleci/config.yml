@@ -106,16 +106,14 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      # TODO: use an actual domain
-      # - run: IMS_DOMAIN=https://example.com npm run monitors
+      - run: IMS_DOMAIN=https://jongleberry-ims.herokuapp.com npm run monitors
 
   monitor-staging:
     <<: *browser-defaults
     steps:
       - checkout
       - *restore_cache
-      # TODO: use an actual domain
-      # - run: IMS_DOMAIN=https://staging.example.com npm run monitors
+      - run: IMS_DOMAIN=https://jongleberry-ims-staging.herokuapp.com npm run monitors
 
   publish-storybook:
     <<: *defaults
@@ -129,7 +127,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      # - run: docker build . -t jonathanong/ims:$CIRCLE_SHA1 --build-arg GIT_COMMIT_SHA=$CIRCLE_SHA1
+      - run: docker build . -t jonathanong/ims:$CIRCLE_SHA1 --build-arg GIT_COMMIT_SHA=$CIRCLE_SHA1
       # TODO: add smoke tests
 
 workflows:
@@ -138,10 +136,7 @@ workflows:
     jobs:
       - test: *ignore-gh-pages
       - test-browsers: *requires-test
-      - build-docker-image:
-          requires:
-            - test
-            - test-browsers
+      - build-docker-image
       - publish-storybook:
           requires:
             - test
@@ -152,18 +147,8 @@ workflows:
               only:
                 - master
       # TODO: flush this out
-      - monitor-production:
-          filters:
-            branches:
-              ignore:
-                - master
-                - gh-pages
-      - monitor-staging:
-          filters:
-            branches:
-              ignore:
-                - master
-                - gh-pages
+      - monitor-production: *ignore-gh-pages
+      - monitor-staging: *ignore-gh-pages
   monitor:
     triggers:
       - schedule:
