@@ -49,7 +49,7 @@ save_cache: &save_cache
     paths:
       - node_modules
 
-restore_workspace_cache: &restore_workspace_cachee
+restore_workspace_cache: &restore_workspace_cache
   restore_cache:
     keys:
       - workspace-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
