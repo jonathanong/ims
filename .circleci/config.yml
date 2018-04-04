@@ -81,9 +81,9 @@ jobs:
       - run: npm run build
       - run: npm run build-storybook
       - run: npm run reset-db
-      - run: npm run test:server -- --maxWorkers 4
+      - run: npm run test:server -- --maxWorkers 4 --coverage
       - *test-coverage
-      - run: npm run test:jsdom -- --maxWorkers 2
+      - run: npm run test:jsdom -- --maxWorkers 2 --coverage
       - *test-coverage
       - *save_cache
 

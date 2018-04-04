@@ -1,6 +1,5 @@
 {
   "cacheDirectory": "node_modules/.cache/jest",
-  "collectCoverage": true,
   "collectCoverageFrom": [
     "**/*.js"
   ],
