@@ -107,6 +107,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
+      - run: npm install # TODO: make this fast
       - run: IMS_DOMAIN=https://jongleberry-ims.herokuapp.com npm run monitors
 
   monitor-staging:
@@ -114,6 +115,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
+      - run: npm install # TODO: make this fast
       - run: IMS_DOMAIN=https://jongleberry-ims-staging.herokuapp.com npm run monitors
 
   publish-storybook:
@@ -147,8 +149,8 @@ workflows:
             branches:
               only:
                 - master
-      - monitor-production: *requires-test
-      - monitor-staging: *requires-test
+      - monitor-production: *ignore-gh-pages
+      - monitor-staging: *ignore-gh-pages
   monitor:
     triggers:
       - schedule:
