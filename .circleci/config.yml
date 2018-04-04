@@ -125,7 +125,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: docker build . -t jonathanong/ims:$CIRCLE_SHA1 --build-arg GIT_COMMIT_SHA=$CIRCLE_SHA1
+      # - run: docker build . -t jonathanong/ims:$CIRCLE_SHA1 --build-arg GIT_COMMIT_SHA=$CIRCLE_SHA1
       # TODO: add smoke tests
 
 workflows:
