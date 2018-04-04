@@ -1,7 +1,9 @@
 
 const assert = require('http-assert')
 const error = require('http-errors')
+console.log('before require(sharp)')
 const sharp = require('sharp')
+console.log('after require(sharp)')
 
 const { supported_image_formats } = require('../../../isomorphic/constants.json')
 
