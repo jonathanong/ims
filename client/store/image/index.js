@@ -2,6 +2,7 @@
 import { getImageById } from '../../api-sdk/images'
 import { INITIALIZE, UPDATE } from './actions'
 
+// TODO: create an abstraction for these API calls
 export const getImage = (dispatch) => async (id) => {
   const queryId = Symbol(id)
   dispatch({

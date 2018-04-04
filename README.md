@@ -9,6 +9,8 @@
 IMS is an image management system designed for managing your static assets. It's not designed to be a full-fledged CMS or DAM.
 This is also my reference app architecture. See [Architecture](ARCHITECTURE.md) for more information.
 
+> NOTE: THIS IS NOT FEATURE COMPLETE
+
 ## Features
 
 - Image uploading

@@ -4,6 +4,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
+        // TODO: modularize into a share loaders config file
         use: [
           {
             loader: 'style-loader'
