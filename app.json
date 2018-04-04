@@ -1,0 +1,46 @@
+{
+  "name": "vacation-server",
+  "env": {
+    "NODE_ENV": {
+      "value": "staging",
+      "required": true
+    },
+    "JOBS": {
+      "value": "max",
+      "required": true
+    },
+    "HEROKU_REVIEW_APP": {
+      "value": "1",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "IMS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "IMS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "IMS_S3_BUCKET": {
+      "required": true
+    },
+    "IMS_IMGIX_SUBDOMAIN": {
+      "required": true
+    },
+    "IMS_IMGIX_API_KEY": {
+      "required": true
+    }
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "npm run reset-db"
+  }
+}
