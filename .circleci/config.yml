@@ -86,7 +86,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: npm install # just in case
+      - run: npm install # just in case as this is a different build environment
       - run: npm run build
       - run: npm run reset-db
       - run:
@@ -102,14 +102,16 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: IMS_DOMAIN=https://example.com npm run monitors
+      # TODO: use an actual domain
+      # - run: IMS_DOMAIN=https://example.com npm run monitors
 
   monitor-staging:
     <<: *browser-defaults
     steps:
       - checkout
       - *restore_cache
-      - run: IMS_DOMAIN=https://staging.example.com npm run monitors
+      # TODO: use an actual domain
+      # - run: IMS_DOMAIN=https://staging.example.com npm run monitors
 
   publish-storybook:
     <<: *defaults
@@ -125,6 +127,7 @@ jobs:
     steps:
       - checkout
       - run: docker build . -t jonathanong/ims:$CIRCLE_SHA1 --build-arg GIT_COMMIT_SHA=$CIRCLE_SHA1
+      # TODO: add smoke tests
 
 workflows:
   version: 2
