@@ -132,8 +132,6 @@ workflows:
     jobs:
       - test: *ignore-gh-pages
       - test-browsers: *requires-test
-      - monitor-production: *requires-test
-      - monitor-staging: *requires-test
       - build-docker-image:
           requires:
             - test
@@ -147,6 +145,9 @@ workflows:
             branches:
               only:
                 - master
+      # TODO: flush this out
+      - monitor-production: *ignore-gh-pages
+      - monitor-staging: *ignore-gh-pages
   monitor:
     triggers:
       - schedule:
