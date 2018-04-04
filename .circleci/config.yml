@@ -93,9 +93,10 @@ jobs:
       - *restore_cache
       - run: npm run reset-db
       - run:
-          name: server
+          name: serve
           command: node bin/serve.js
           background: true
+      # TODO: actually poll for the server to start
       - run: sleep 3
       - run: npm run monitors
       - run: npm run automation
