@@ -141,6 +141,8 @@ workflows:
       - publish-storybook:
           requires:
             - test
+            - test-browsers
+            - build-docker-image
           filters:
             branches:
               only:
