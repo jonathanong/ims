@@ -23,7 +23,9 @@ server.listen(port, function (err) {
   console.log('IMS serving at http://localhost:%s', this.address().port)
 })
 
+// we just log unhandled rejection errors because they don't ruin the process
 process.on('unhandledRejection', onError)
+// uncaught exceptions can mess up your code, so restart the server gracefully
 process.on('uncaughtException', (err) => {
   console.error(err.stack)
   close()
@@ -35,5 +37,5 @@ process.on('SIGTERM', close)
 function close () {
   if (closing) return
   closing = true
-  server.stop()
+  server.stop() // from `stoppable`
 }
