@@ -19,8 +19,8 @@ module.exports = {
   },
   output: {
     path: path.resolve('dist'),
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].[hash].js',
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js',
     publicPath: '/assets/'
   },
   module: {
@@ -62,8 +62,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: '[name].[hash].css',
-      chunkFilename: '[name].[hash].css'
+      filename: '[name].[chunkhash].css',
+      chunkFilename: '[name].[chunkhash].css'
     }),
     new ManifestPlugin({
       fileName: 'manifest.json'
