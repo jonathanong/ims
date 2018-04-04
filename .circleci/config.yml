@@ -60,6 +60,7 @@ save_workspace_cache: &save_workspace_cache
     paths:
       - dist
       - storybook-build
+      - node_modules/.cache
 
 ignore-gh-pages: &ignore-gh-pages
   filters:
