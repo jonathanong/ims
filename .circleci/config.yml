@@ -86,7 +86,6 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: npm install # just in case as this is a different build environment
       - run: npm run build
       - run: npm run reset-db
       - run:
