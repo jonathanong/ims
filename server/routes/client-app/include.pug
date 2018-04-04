@@ -61,6 +61,8 @@ mixin head
     document.documentElement.classList.add('js')
   script.
     IMS={}
+  //- Uncomment if you support IE11
+  //- script(src='/assets/babel-polyfill/polyfill.min.js')
   +rollbar
   +detect-ie
 
