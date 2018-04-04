@@ -109,6 +109,7 @@
     "webpack-visualizer-plugin": "^0.1.11"
   },
   "engines": {
-    "node": "8"
+    "node": "^8.11.1",
+    "npm": "^5.6.0"
   }
 }
