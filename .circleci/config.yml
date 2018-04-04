@@ -55,6 +55,10 @@ ignore-gh-pages: &ignore-gh-pages
       ignore:
         - gh-pages
 
+requires-test: &requires-test
+  requires:
+    - test
+
 test-coverage: &test-coverage
   run: npx codecov && rm -rf codecov
 
@@ -93,6 +97,20 @@ jobs:
       - run: npm run monitors
       - run: npm run automation
 
+  monitor-production:
+    <<: *browser-defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: IMS_DOMAIN=https://example.com npm run monitors
+
+  monitor-staging:
+    <<: *browser-defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: IMS_DOMAIN=https://staging.example.com npm run monitors
+
   publish-storybook:
     <<: *defaults
     steps:
@@ -113,10 +131,9 @@ workflows:
   commit:
     jobs:
       - test: *ignore-gh-pages
-      - test-browsers:
-          <<: *ignore-gh-pages
-          requires:
-            - test
+      - test-browsers: *requires-test
+      - monitor-production: *requires-test
+      - monitor-staging: *requires-test
       - build-docker-image: *ignore-gh-pages
       - publish-storybook:
           requires:
@@ -125,3 +142,13 @@ workflows:
             branches:
               only:
                 - master
+  monitor:
+    triggers:
+      - schedule:
+          cron: "0 0 0 0 *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - monitor-production
