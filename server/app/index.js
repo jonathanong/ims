@@ -11,6 +11,8 @@ const app = module.exports = new Koa()
 const env = process.env.NODE_ENV || 'development'
 const maxage = 86400 * 1000
 
+process.on('unhandledRejection', onError)
+
 require('koa-body-parsers')(app)
 
 app.on('error', (err, ctx) => {
