@@ -18,7 +18,7 @@
     "build-watch": "WEBPACK_WATCH=1 npx webpack --config webpack.production.js --hide-modules --watch",
     "monitors": "dsc-monitor 'tests/monitors/**/*.js'",
     "automation": "dsc-e2e 'tests/automation/**/*.js'",
-    "heroku-postbuild": "npm run build && npm run build-storybook && npm prune --production"
+    "heroku-postbuild": "npm run build && npm run build-storybook && rm -rf node_modules && npm install"
   },
   "author": "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
   "license": "MIT",
