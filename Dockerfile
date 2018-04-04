@@ -21,8 +21,7 @@ RUN \
   npm install && \
   npm run build && \
   npm run build-storybook && \
-  rm -rf node_modules && \
-  npm install --production
+  npm prune --production
 
 EXPOSE 3000
 
