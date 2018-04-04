@@ -134,7 +134,10 @@ workflows:
       - test-browsers: *requires-test
       - monitor-production: *requires-test
       - monitor-staging: *requires-test
-      - build-docker-image: *ignore-gh-pages
+      - build-docker-image:
+          requires:
+            - test
+            - test-browsers
       - publish-storybook:
           requires:
             - test
