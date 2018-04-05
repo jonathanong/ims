@@ -123,7 +123,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: cp -r .circleci storybook-static/
+      - run: cp -R .circleci storybook-static/
       - run: npx storybook-to-ghpages --existing-output-dir=storybook-static
 
   build-docker-image:
