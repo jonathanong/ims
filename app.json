@@ -1,5 +1,5 @@
 {
-  "name": "vacation-server",
+  "name": "ims",
   "env": {
     "NODE_ENV": {
       "value": "staging",

@@ -52,7 +52,7 @@ save_cache: &save_cache
     paths:
       - node_modules
       - dist
-      - storybook-build
+      - storybook-static
 
 ignore-gh-pages: &ignore-gh-pages
   filters:
