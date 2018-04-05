@@ -58,7 +58,7 @@ app.use(mount('/assets/rollbar', serve(path.resolve('node_modules/rollbar/dist')
   maxage
 })))
 
-// wepback-built files
+// webpack-built files
 app.use(mount('/assets', compose([
   serve(path.resolve('dist'), {
     maxage

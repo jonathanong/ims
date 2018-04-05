@@ -46,7 +46,7 @@ input[type='checkbox'] {
 
 }
 
-:global(.checkbox-group) > input[type='checkbox']{
+:global(.checkbox-group) > input[type='checkbox'] {
 
 }
 
