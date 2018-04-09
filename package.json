@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@dollarshaveclub/e2e": "^1.1.3",
-    "@dollarshaveclub/monitor": "^1.7.3",
+    "@dollarshaveclub/monitor": "^1.8.0",
     "@jongleberry/json-check": "^1.0.0",
     "@storybook/addon-a11y": "^4.0.0-alpha.1",
     "@storybook/addon-actions": "^4.0.0-alpha.1",
