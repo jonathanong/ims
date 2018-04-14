@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "react",
+    ["env", {
+      "targets": {
+        "browsers": "last 3 years",
+        "node": "current"
+      },
+      "useBuiltIns": true,
+      "modules": false
+    }],
+    "stage-2",
+  ],
+  "plugins": [
+    "transform-runtime",
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}
