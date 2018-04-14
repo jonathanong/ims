@@ -32,7 +32,7 @@
     "koa": "^2.5.0",
     "koa-body-parsers": "^3.1.0",
     "koa-compose": "^4.0.0",
-    "koa-compress": "^2.0.0",
+    "koa-compress": "^3.0.0",
     "koa-conditional-get": "^2.0.0",
     "koa-etag": "^3.0.0",
     "koa-favicon": "^2.0.1",
