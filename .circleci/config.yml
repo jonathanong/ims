@@ -149,8 +149,8 @@ workflows:
             branches:
               only:
                 - master
-      - monitor-production: *ignore-gh-pages
-      - monitor-staging: *ignore-gh-pages
+      # - monitor-production: *ignore-gh-pages
+      # - monitor-staging: *ignore-gh-pages
   monitor:
     triggers:
       - schedule:
