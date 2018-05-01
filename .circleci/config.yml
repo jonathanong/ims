@@ -65,7 +65,7 @@ requires-test: &requires-test
     - test
 
 test-coverage: &test-coverage
-  run: npx codecov && rm -rf codecov
+  run: npx codecov && rm -rf coverage
 
 version: 2
 jobs:
