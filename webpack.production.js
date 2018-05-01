@@ -53,9 +53,6 @@ module.exports = {
   },
   plugins: [
     new CaseSensitivePathsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
     new webpack.optimize.MinChunkSizePlugin({
       minChunkSize: 1024 * 10
     }),
