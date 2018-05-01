@@ -1,0 +1,165 @@
+
+defaults: &defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:8
+      environment:
+        NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
+        JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+
+browser-defaults: &browser-defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:8-browsers
+      environment:
+        NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
+        JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+        DATABASE_URL: postgres://root:@localhost/ims
+        DATABASE_NAME: ims
+    - image: mdillon/postgis:10-alpine
+      environment:
+        POSTGRES_USER: root
+        POSTGRES_DB: ims
+        POSTGRES_PASSWORD: ""
+
+server-defaults: &server-defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/node:8
+      environment:
+        NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
+        JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
+        DATABASE_URL: postgres://root:@localhost/ims
+        DATABASE_NAME: ims
+    - image: mdillon/postgis:10-alpine
+      environment:
+        POSTGRES_USER: root
+        POSTGRES_DB: ims
+        POSTGRES_PASSWORD: ""
+
+restore_cache: &restore_cache
+  restore_cache:
+    keys:
+      - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
+      - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-
+      - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-master-
+      - code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-
+      # We want a clean npm install on package changes
+
+save_cache: &save_cache
+  save_cache:
+    key: code-{{ checksum ".nvmrc" }}-{{ checksum "package.json" }}-{{ .Branch }}-{{ .Environment.CIRCLE_WORKFLOW_WORKSPACE_ID }}
+    paths:
+      - node_modules
+      - dist
+      - storybook-static
+
+ignore-gh-pages: &ignore-gh-pages
+  filters:
+    branches:
+      ignore:
+        - gh-pages
+
+requires-test: &requires-test
+  requires:
+    - test
+
+test-coverage: &test-coverage
+  run: npx codecov && rm -rf coverage
+
+version: 2
+jobs:
+  test:
+    <<: *server-defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm install
+      - run: npm run json-check
+      - run: npm run eslint
+      - run: npm run stylelint
+      - run: npm run build
+      - run: npm run build-storybook
+      - run: npm run reset-db
+      - run: npm run test:server -- --maxWorkers 4 --coverage
+      - *test-coverage
+      - run: npm run test:jsdom -- --maxWorkers 2 --coverage
+      - *test-coverage
+      - *save_cache
+
+  test-browsers:
+    <<: *browser-defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm run reset-db
+      - run:
+          name: serve
+          command: node bin/serve.js
+          background: true
+      # TODO: actually poll for the server to start
+      - run: sleep 3
+      - run: npm run monitors
+      - run: npm run automation
+
+  monitor-production:
+    <<: *browser-defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm install # TODO: make this fast
+      - run: IMS_DOMAIN=https://jongleberry-ims.herokuapp.com npm run monitors
+
+  monitor-staging:
+    <<: *browser-defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm install # TODO: make this fast
+      - run: IMS_DOMAIN=https://jongleberry-ims-staging.herokuapp.com npm run monitors
+
+  publish-storybook:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: cp -R .circleci storybook-static/
+      - run: npx storybook-to-ghpages --existing-output-dir=storybook-static
+
+  build-docker-image:
+    machine: true
+    steps:
+      - checkout
+      - run: docker build . -t jonathanong/ims:$CIRCLE_SHA1 --build-arg GIT_COMMIT_SHA=$CIRCLE_SHA1
+      # TODO: add smoke tests
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - test: *ignore-gh-pages
+      - test-browsers: *requires-test
+      - build-docker-image
+      - publish-storybook:
+          requires:
+            - test
+            - test-browsers
+            - build-docker-image
+          filters:
+            branches:
+              only:
+                - master
+      # - monitor-production: *ignore-gh-pages
+      # - monitor-staging: *ignore-gh-pages
+  monitor:
+    triggers:
+      - schedule:
+          # TODO: when actually in production, run in every minute
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - monitor-production
+      - monitor-staging
