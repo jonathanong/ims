@@ -2,7 +2,7 @@
 defaults: &defaults
   working_directory: ~/code
   docker:
-    - image: circleci/node:10
+    - image: circleci/node:8
       environment:
         NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
         JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
@@ -10,7 +10,7 @@ defaults: &defaults
 browser-defaults: &browser-defaults
   working_directory: ~/code
   docker:
-    - image: circleci/node:10-browsers
+    - image: circleci/node:8-browsers
       environment:
         NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
         JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
@@ -25,7 +25,7 @@ browser-defaults: &browser-defaults
 server-defaults: &server-defaults
   working_directory: ~/code
   docker:
-    - image: circleci/node:10
+    - image: circleci/node:8
       environment:
         NPM_CONFIG_LOGLEVEL: error # make npm commands less noisy
         JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
