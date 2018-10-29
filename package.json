@@ -76,7 +76,7 @@
     "case-sensitive-paths-webpack-plugin": "^2.1.2",
     "classnames": "^2.2.5",
     "concurrency-logger": "^2.1.0",
-    "css-loader": "^0.28.11",
+    "css-loader": "^1.0.1",
     "eslint": "^4.19.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
