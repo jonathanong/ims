@@ -60,7 +60,7 @@
     "@storybook/addon-actions": "^4.1.13",
     "@storybook/addon-links": "^4.1.13",
     "@storybook/addon-storyshots": "^4.1.13",
-    "@storybook/react": "^4.0.0-alpha.2",
+    "@storybook/react": "^4.1.13",
     "@storybook/storybook-deployer": "^2.3.0",
     "aws-sdk": "^2.217.1",
     "babel-core": "^6.26.0",
