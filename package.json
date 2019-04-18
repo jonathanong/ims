@@ -61,7 +61,7 @@
     "@storybook/addon-links": "^5.0.10",
     "@storybook/addon-storyshots": "^5.0.10",
     "@storybook/react": "^5.0.10",
-    "@storybook/storybook-deployer": "^2.3.0",
+    "@storybook/storybook-deployer": "^2.8.1",
     "aws-sdk": "^2.217.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
