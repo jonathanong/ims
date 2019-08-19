@@ -29,7 +29,7 @@
     "debug": "^3.1.0",
     "fs-cp": "^1.4.0",
     "jstransformer-uglify-js": "^1.2.0",
-    "koa": "^2.5.0",
+    "koa": "^2.8.1",
     "koa-body-parsers": "^3.1.0",
     "koa-compose": "^4.0.0",
     "koa-compress": "^3.0.0",
