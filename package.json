@@ -58,7 +58,7 @@
     "@jongleberry/json-check": "^1.0.0",
     "@storybook/addon-a11y": "^5.3.14",
     "@storybook/addon-actions": "^5.3.14",
-    "@storybook/addon-links": "^4.0.0-alpha.2",
+    "@storybook/addon-links": "^5.3.14",
     "@storybook/addon-storyshots": "^4.0.0-alpha.2",
     "@storybook/react": "^4.0.0-alpha.2",
     "@storybook/storybook-deployer": "^2.3.0",
